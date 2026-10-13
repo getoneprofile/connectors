@@ -1,0 +1,58 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.30",
+  "version": "1.0.0",
+  "id": "8caccb74-33d1-4241-86cb-aaceee9f72a0",
+  "developer": {
+    "name": "Oneprofile",
+    "websiteUrl": "https://www.getoneprofile.ai",
+    "privacyUrl": "https://www.getoneprofile.ai/privacy-policy",
+    "termsOfUseUrl": "https://www.getoneprofile.ai/terms"
+  },
+  "name": {
+    "short": "Oneprofile",
+    "full": "Oneprofile"
+  },
+  "description": {
+    "short": "Find prospects, research them and run outreach from Copilot",
+    "full": "Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This connector lets Copilot do that work in your Oneprofile workspace from a conversation.\n\nWhat you can ask for:\n- Find people or companies by title, seniority, industry, size, location, technology or funding, or by a recent signal such as a job change or a product launch. Matches are counted for free before anything is saved.\n- Save the matches to a table, or bring in your own list from pasted rows or a connected tool such as your CRM.\n- Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers.\n- Build an email and LinkedIn sequence for a table, read the messages it will send, and clear what blocks its launch.\n- Work through replies: summarize what came in, label conversations, and draft answers.\n- Report how your sequences are doing, including replies, positive replies, bounces and credits used.\n\nHow it works: Copilot acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up is separate from changing your workspace, and both are separate from anything that sends to people or removes something, so each kind can be approved on its own. Some actions spend credits from your Oneprofile workspace, and every priced change comes back with the price it ran at.\n\nYou need a Oneprofile account. A read-only connection can look things up but not change anything; making changes from Copilot requires a Oneprofile workspace on a paid plan.",
+    "features": [
+      {
+        "title": "Find and save leads",
+        "description": "Search people and companies by title, industry, size, location or buying signal, counted free before saving."
+      },
+      {
+        "title": "Enrich and research",
+        "description": "Fill in work emails, phone numbers and company details, or research and score each account with AI."
+      },
+      {
+        "title": "Run outreach and work replies",
+        "description": "Build email and LinkedIn sequences, clear their launch checks, and summarize, label and answer replies."
+      }
+    ]
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#1FB8B5",
+  "agentConnectors": [
+    {
+      "id": "oneprofile",
+      "displayName": "Oneprofile",
+      "description": "Oneprofile's MCP server: lead search, enrichment and AI research, tables, email and LinkedIn sequences, the reply inbox and outreach reporting, acting as the signed-in person in the one Oneprofile workspace they pick. Reads, changes, and sends or removals are separate tools, so each kind can be approved on its own.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://api.getoneprofile.ai/mcp",
+          "mcpToolDescription": {
+            "file": "mcptools.json"
+          },
+          "authorization": {
+            "type": "AzureKeyVault",
+            "referenceId": "https://REPLACE-WITH-KEY-VAULT-NAME.vault.azure.net/"
+          }
+        }
+      }
+    }
+  ]
+}
