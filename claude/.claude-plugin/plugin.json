@@ -1,0 +1,28 @@
+{
+  "name": "oneprofile",
+  "displayName": "Oneprofile",
+  "version": "1.0.0",
+  "description": "Find prospects, research them, and run email and LinkedIn outreach from a conversation, in your Oneprofile workspace: lead search, enrichment, research agents, sequences and the reply inbox.",
+  "author": {
+    "name": "Oneprofile",
+    "email": "support@getoneprofile.ai",
+    "url": "https://www.getoneprofile.ai"
+  },
+  "homepage": "https://docs.getoneprofile.ai/integrations/ai-apps",
+  "repository": "https://github.com/getoneprofile/connectors",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "prospecting",
+    "lead-generation",
+    "enrichment",
+    "outreach",
+    "cold-email",
+    "go-to-market"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://docs.getoneprofile.ai/integrations/ai-apps",
+  "supportUrl": "https://docs.getoneprofile.ai",
+  "privacyPolicyUrl": "https://www.getoneprofile.ai/privacy-policy",
+  "termsOfServiceUrl": "https://www.getoneprofile.ai/terms"
+}
