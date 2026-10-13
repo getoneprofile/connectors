@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "oneprofile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find prospects, research them, and run email and LinkedIn outreach from a conversation, in your Oneprofile workspace: lead search, enrichment, research agents, sequences and the reply inbox.",
   "author": {
     "name": "Oneprofile",
@@ -11,17 +11,24 @@
   "homepage": "https://www.getoneprofile.ai",
   "repository": "https://github.com/getoneprofile/connectors",
   "license": "MIT",
-  "keywords": ["sales", "prospecting", "lead-generation", "enrichment", "outreach", "go-to-market"],
+  "keywords": [
+    "sales",
+    "prospecting",
+    "lead-generation",
+    "enrichment",
+    "outreach",
+    "go-to-market"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Oneprofile",
         "shortDescription": "Find, research and reach leads",
-        "longDescription": "Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This plugin connects ChatGPT to your Oneprofile workspace so you can do that work from a conversation.\n\nWhat you can ask for:\n- Find people or companies by title, seniority, industry, size, location, technology or funding, or by a recent signal such as a job change or a product launch. Matches are counted for free before anything is saved.\n- Save the matches to a table, or bring in your own list from pasted rows or a connected tool such as your CRM.\n- Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers.\n- Build an email and LinkedIn sequence for a table, read the messages it will send, and clear what blocks its launch.\n- Work through replies: summarize what came in, label conversations, and draft answers.\n- Report how your sequences are doing, including replies, positive replies, bounces and credits used.\n\nHow it works: ChatGPT acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up is separate from changing your workspace, and both are separate from anything that sends to people or removes something, so ChatGPT asks before each kind. Nothing is sent, launched or deleted without your confirmation. Some actions spend credits from your Oneprofile workspace, and ChatGPT tells you the price before it spends.\n\nYou need a Oneprofile account. A read-only connection can look things up but not change anything; making changes from ChatGPT requires a Oneprofile workspace on a paid plan.",
+        "longDescription": "Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This plugin connects ChatGPT to your Oneprofile workspace so you can do that work from a conversation.\n\nWhat you can ask for:\n- Find people or companies by title, seniority, industry, size, location, technology or funding, or by a recent signal such as a job change or a product launch. Matches are counted before anything is saved.\n- Save the matches to a table, or bring in your own list from pasted rows or a connected tool such as your CRM.\n- Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers.\n- Build an email and LinkedIn sequence for a table, read the messages it will send, and clear what blocks its launch.\n- Work through replies: summarize what came in, label conversations, and draft answers.\n- Report how your sequences are doing, including replies, positive replies, bounces and credits used.\n\nHow it works: ChatGPT acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up is separate from changing your workspace, and both are separate from anything that sends to people or removes something, so ChatGPT asks before each kind. Nothing is sent, launched or deleted without your confirmation. Actions that use your workspace's Oneprofile credits say what they will use before they run.\n\nYou need a Oneprofile account. When you connect, choose read only to let ChatGPT look things up without changing anything, or read and write.",
         "developerName": "Oneprofile",
         "category": "Business & Operations",
         "capabilities": [
-          "Find people and companies that match your ideal customer, counted for free",
+          "Find people and companies that match your ideal customer",
           "Save search results, pasted lists or CRM records to a table",
           "Fill in work emails, phone numbers and company details",
           "Research and score accounts with AI",
