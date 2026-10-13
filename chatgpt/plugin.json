@@ -95,6 +95,7 @@
             }
           ]
         },
+        "demo_recording_url": "https://youtu.be/M1I4acuCBsQ",
         "commerce": false,
         "commerce_description": "This plugin does not sell products or process payments. Some actions spend credits the workspace already holds in Oneprofile; the plugin cannot buy credits or change plans."
       },
