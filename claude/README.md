@@ -1,7 +1,5 @@
 # Oneprofile for Claude
 
-![Oneprofile](assets/icon.png)
-
 Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This plugin connects Claude to your Oneprofile workspace and teaches it the workflows that get good results there, so you can find leads, research them, run outreach and work your replies from a conversation.
 
 It bundles two things:
