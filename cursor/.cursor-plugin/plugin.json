@@ -1,0 +1,33 @@
+{
+  "name": "oneprofile",
+  "displayName": "Oneprofile",
+  "version": "1.0.0",
+  "description": "Find prospects, research them, and run email and LinkedIn outreach from Cursor, in your Oneprofile workspace: lead search, enrichment, research agents, sequences and the reply inbox.",
+  "author": {
+    "name": "Oneprofile",
+    "email": "support@getoneprofile.ai"
+  },
+  "publisher": "Oneprofile",
+  "homepage": "https://www.getoneprofile.ai",
+  "repository": "https://github.com/getoneprofile/connectors",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "oneprofile",
+    "sales",
+    "prospecting",
+    "lead-generation",
+    "enrichment",
+    "outreach",
+    "cold-email",
+    "go-to-market",
+    "mcp"
+  ],
+  "category": "integrations",
+  "tags": [
+    "oneprofile",
+    "sales",
+    "prospecting",
+    "mcp"
+  ]
+}
