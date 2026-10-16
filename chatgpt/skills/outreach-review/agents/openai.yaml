@@ -1,5 +1,5 @@
 interface:
-  display_name: "Pipeline review"
+  display_name: "Outreach review"
   short_description: "Report on outreach results"
   default_prompt: "How are my sequences doing this month?"
 dependencies:

@@ -5,13 +5,13 @@
     "email": "support@getoneprofile.ai"
   },
   "metadata": {
-    "description": "Oneprofile's plugin for Cursor: lead search, enrichment, research agents, email and LinkedIn sequences and the reply inbox."
+    "description": "Oneprofile for Cursor: find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace."
   },
   "plugins": [
     {
       "name": "oneprofile",
       "source": "cursor",
-      "description": "Find prospects, research them, and run email and LinkedIn outreach from Cursor, in your Oneprofile workspace."
+      "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace."
     }
   ]
 }

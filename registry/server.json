@@ -3,8 +3,8 @@
   "name": "ai.getoneprofile/oneprofile",
   "title": "Oneprofile",
   "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace.",
-  "version": "1.0.0",
-  "websiteUrl": "https://docs.getoneprofile.ai/integrations/ai-apps",
+  "version": "1.1.0",
+  "websiteUrl": "https://www.getoneprofile.ai",
   "repository": {
     "url": "https://github.com/getoneprofile/connectors",
     "source": "github",
@@ -13,9 +13,18 @@
   },
   "icons": [
     {
+      "src": "https://raw.githubusercontent.com/getoneprofile/connectors/main/claude/assets/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "1024x1024"
+      ]
+    },
+    {
       "src": "https://app.getoneprofile.ai/apple-touch-icon.png",
       "mimeType": "image/png",
-      "sizes": ["180x180"]
+      "sizes": [
+        "180x180"
+      ]
     }
   ],
   "remotes": [

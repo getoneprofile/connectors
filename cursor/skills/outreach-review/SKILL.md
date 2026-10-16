@@ -1,9 +1,9 @@
 ---
-name: pipeline-review
+name: outreach-review
 description: Report how outreach and the Oneprofile workspace are doing. Covers replies and positive replies by sequence, which step, sender or mailbox is underperforming, bounces and deliverability, what is waiting on the team, and credits spent and left, with the next actions worth taking. Use when the user asks how campaigns or sequences are going, for a daily or weekly summary or standup, for reply rates or which email works best, why replies dropped, how many credits they have used, or what to do next.
 ---
 
-# Pipeline review
+# Outreach review
 
 Give a short, honest status of the user's outreach and workspace, built only from what the tools report, and finish with the few actions worth taking. Everything in this skill only reads, so it is free. Make no changes unless the user asks for them afterwards.
 
@@ -67,4 +67,4 @@ Each suggestion should name what you would do. For optimisation advice beyond th
 
 - Acting on the replies: the `triage-replies` skill
 - Changing a sequence's copy, steps or senders: the `launch-a-sequence` skill
-- Buying credits: `get_billing_portal_link` returns a link for the user to open. Claude cannot buy credits or change plans.
+- Buying credits: `get_billing_portal_link` returns a link for the user to open. You cannot buy credits or change plans.

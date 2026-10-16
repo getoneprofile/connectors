@@ -8,18 +8,20 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 
 - A Oneprofile account. Sign up at [getoneprofile.ai](https://www.getoneprofile.ai).
 - A workspace on a paid Oneprofile plan, to make changes. On any plan, a read-only connection can look things up.
+- To send email, a Google Workspace mailbox connected in Oneprofile. Microsoft 365 / Outlook mailboxes are coming soon.
+- For LinkedIn steps, the Oneprofile browser extension, signed in to the sender's own LinkedIn account.
 
 ## Supported operations
 
-The server acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. It lists the everyday tools by name. The rest are reached through three doors, one for each kind of call, so a person can allow reads and still approve every send.
+The server acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. It lists the everyday tools by name. The rest are reached through three runner tools, one for each kind of call, so a person can allow reads and still approve every send.
 
-### Doors
+### Running any tool
 
 | Tool | What it does |
 | --- | --- |
 | `run_read_tool` | Runs any Oneprofile tool that only reads, by name. Refuses a call that would change anything. |
 | `run_change_tool` | Runs any Oneprofile tool that changes the workspace, by name: creates, edits, runs and searches that save. A priced call's answer says what it was priced at. |
-| `run_send_or_remove_tool` | Runs a tool that sends to people outside the workspace, removes or overwrites something, or moves money. Only those. |
+| `run_send_or_remove_tool` | Runs a tool that sends to people outside the workspace, removes or overwrites something, or changes where a payout goes. Only those. |
 | `describe_tool` | Reads any tool in full: what it does, what it answers with, and every argument. |
 
 ### Tables and leads
@@ -58,11 +60,11 @@ The server acts as you, in the one Oneprofile workspace you pick when you sign i
 | `get_pricing` | Reads what things cost in credits, and the workspace's balance. |
 | `search_help` | Looks up how something in Oneprofile works. |
 | `search_playbooks`, `read_playbook` | Find and read maintained outreach guidance. |
-| `list_billing_tools`, `list_context_tools`, `list_integration_tools`, `list_notification_tools`, `list_account_tools` | List the tools for credits, business context, connected tools, notifications and the workspace's own programs. |
+| `list_billing_tools`, `list_context_tools`, `list_integration_tools`, `list_notification_tools`, `list_account_tools` | List the tools for credits, business context, connected tools, notifications, and onboarding, referrals and the affiliate program. |
 
 ## Obtaining credentials
 
-Sign-in is OAuth 2.0. When you connect Oneprofile, a Oneprofile sign-in page opens. Sign in with your Oneprofile account, pick the workspace Copilot should work in, and choose **Read and write** or **Read only**.
+Sign-in is OAuth 2.1, using the authorization code flow with PKCE. When you connect Oneprofile, a Oneprofile sign-in page opens. Sign in with your Oneprofile account, pick the workspace Copilot should work in, and choose **Read and write** or **Read only**.
 
 ## Getting started
 
@@ -75,6 +77,8 @@ Looking things up, counting search matches and reading your workspace are free. 
 ## Known issues and limitations
 
 - Making changes needs a Oneprofile workspace on a paid plan. On any other plan, every connection is read-only, whatever was chosen at sign-in.
+- Email sends only from a Google Workspace mailbox connected in Oneprofile. Microsoft 365 / Outlook mailboxes are coming soon.
+- LinkedIn steps run in the sender's own browser through the Oneprofile extension.
 - A connection works in one workspace. To work in another, connect again and pick it.
 - A connection that goes unused for 30 days signs out, and you sign in again.
 - Only the everyday tools are listed by name. Everything else, a few hundred tools, is reached through `run_read_tool`, `run_change_tool` or `run_send_or_remove_tool`, using the names the `list_..._tools` tools give and the arguments `describe_tool` gives.

@@ -89,4 +89,4 @@ Messages that senders hold for approval wait in Tasks.
 
 ## Next steps
 
-- How the sequences behind these replies are performing: the `pipeline-review` skill
+- How the sequences behind these replies are performing: the `outreach-review` skill

@@ -13,7 +13,7 @@ Build a draft sequence from a table, let the user judge real messages, clear wha
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something or moves money. Launching, resuming and test sends go through this door.
+- `run_send_or_remove_tool` for a call that sends to people, removes something or changes where a payout goes. Launching, resuming and test sends go through this door.
 
 Read exact arguments with `describe_tool` (up to 8 names per call). When a door refuses a call, it names the door to use.
 
@@ -95,4 +95,4 @@ Then call `launch_sequence` through `run_send_or_remove_tool`. Pass on the price
 ## Next steps
 
 - Replies as they come in: the `triage-replies` skill
-- How it is performing: the `pipeline-review` skill
+- How it is performing: the `outreach-review` skill

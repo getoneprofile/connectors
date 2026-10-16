@@ -16,7 +16,7 @@ It bundles two things:
 | `enrich-a-table` | Fill in work emails, phone numbers, company details or AI research on a table's rows |
 | `launch-a-sequence` | Turn a table into an email and LinkedIn sequence and get it through its launch checks |
 | `triage-replies` | Work through replies in the inbox: read, label, draft answers and send the ones you approve |
-| `pipeline-review` | Get a plain summary of how your sequences, replies, tables and credits are doing |
+| `outreach-review` | Get a plain summary of how your sequences, replies, tables and credits are doing |
 
 You don't need to name a skill. Ask in your own words, such as "find heads of RevOps at Series B fintechs in London", "get work emails for my Q4 list" or "what came in overnight?", and Claude picks the skill that fits.
 
@@ -26,6 +26,8 @@ You don't need to name a skill. Ask in your own words, such as "find heads of Re
 2. Open the plugin's **Connectors** tab and connect **Oneprofile**. In Claude Code, run `/mcp`, choose the Oneprofile server and sign in from the browser tab it opens.
 3. Sign in to Oneprofile, pick the workspace Claude should work in, and choose **Read and write** or **Read only**. Read only lets Claude look things up and never change them. Making changes from an AI app needs a paid Oneprofile plan.
 
+Email steps send from a Google Workspace mailbox connected in Oneprofile, and LinkedIn steps run in your browser through the Oneprofile extension.
+
 You need a Oneprofile account. Sign up at [getoneprofile.ai](https://www.getoneprofile.ai). Setup details for each app are in the [AI apps guide](https://docs.getoneprofile.ai/integrations/ai-apps).
 
 ## What it costs
@@ -34,7 +36,7 @@ Looking things up, counting search matches and reading your workspace are free. 
 
 ## Safety and approvals
 
-Claude works as you, so what it changes counts as your change. Oneprofile reaches its tools through three separate doors: one that only reads, one that changes your workspace, and one for anything that sends to people outside your workspace, removes something or moves money. Your app asks before each kind, so you can let Claude look things up freely and still approve every send. The skills add their own rule on top: Claude never launches a sequence, sends a reply or deletes anything without your explicit go-ahead in the conversation.
+Claude works as you, so what it changes counts as your change. Oneprofile's tools come in three separate kinds: one that only reads, one that changes your workspace, and one for anything that sends to people outside your workspace, removes something or changes where a payout goes. Your app can ask before each kind, so you can let Claude look things up freely and still approve every send. The skills add their own rule on top: Claude never launches a sequence, sends a reply or deletes anything without your explicit go-ahead in the conversation.
 
 ## Data and privacy
 

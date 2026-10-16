@@ -5,7 +5,7 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 It bundles two things:
 
 - **The Oneprofile MCP server** at `https://api.getoneprofile.ai/mcp`, signed in with OAuth. It gives ChatGPT the same tools the AI Assistant inside Oneprofile has, acting as you, in the one workspace you pick when you sign in.
-- **Six skills** that tell ChatGPT when and how to use those tools: `find-leads`, `enrich-a-table`, `import-and-export`, `launch-a-sequence`, `triage-replies` and `pipeline-review`.
+- **Six skills** that tell ChatGPT when and how to use those tools: `find-leads`, `enrich-a-table`, `import-and-export`, `launch-a-sequence`, `triage-replies` and `outreach-review`.
 
 ## Package layout
 
@@ -20,7 +20,7 @@ Build the upload ZIP from this folder with `./build.sh`, which writes `dist/onep
 
 ## Data and safety
 
-The plugin stores nothing and runs no code. Everything ChatGPT does in Oneprofile goes through the MCP server to `api.getoneprofile.ai`, over HTTPS, signed in with the user's own Oneprofile account. Reads, changes, and sends or removals reach Oneprofile through separate tools, so ChatGPT asks before each kind, and the skills never launch a sequence, send a reply or delete anything without an explicit go-ahead. Oneprofile processes data under its [privacy policy](https://www.getoneprofile.ai/privacy-policy) and [terms](https://www.getoneprofile.ai/terms).
+The plugin stores nothing and runs no code. Everything ChatGPT does in Oneprofile goes through the MCP server to `api.getoneprofile.ai`, over HTTPS, signed in with the user's own Oneprofile account. Reads, changes, and sends or removals reach Oneprofile through separate tools, so each kind can be approved on its own, and the skills never launch a sequence, send a reply or delete anything without an explicit go-ahead. Oneprofile processes data under its [privacy policy](https://www.getoneprofile.ai/privacy-policy) and [terms](https://www.getoneprofile.ai/terms).
 
 ## Support
 

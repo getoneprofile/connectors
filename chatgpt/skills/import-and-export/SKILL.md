@@ -13,7 +13,7 @@ Get an existing list into a Oneprofile table so it can be researched and reached
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something or moves money
+- `run_send_or_remove_tool` for a call that sends to people, removes something or changes where a payout goes
 
 Read exact arguments with `describe_tool` (up to 8 names per call). When a door refuses a call, it names the door to use.
 

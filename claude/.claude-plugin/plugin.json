@@ -1,8 +1,8 @@
 {
   "name": "oneprofile",
   "displayName": "Oneprofile",
-  "version": "1.0.0",
-  "description": "Find prospects, research them, and run email and LinkedIn outreach from a conversation, in your Oneprofile workspace: lead search, enrichment, research agents, sequences and the reply inbox.",
+  "version": "1.1.0",
+  "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace.",
   "author": {
     "name": "Oneprofile",
     "email": "support@getoneprofile.ai",
@@ -18,6 +18,7 @@
     "enrichment",
     "outreach",
     "cold-email",
+    "crm",
     "go-to-market"
   ],
   "icon": "./assets/icon.png",

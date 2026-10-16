@@ -13,7 +13,7 @@ The Oneprofile MCP server lists the everyday tools by name, including `list_tabl
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something or moves money
+- `run_send_or_remove_tool` for a call that sends to people, removes something or changes where a payout goes
 
 `run_table_column` always goes through a door: `dry_run: true` makes it a read, and a real run is a change. Column tools beyond the everyday ones are listed by `list_column_tools`, and table tools by `list_table_tools`. Read exact arguments with `describe_tool` (up to 8 names per call). When a door refuses a call, it names the door to use.
 
