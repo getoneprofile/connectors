@@ -55,7 +55,7 @@
         "title": "Change something in Oneprofile",
         "readOnlyHint": false,
         "destructiveHint": false,
-        "openWorldHint": false
+        "openWorldHint": true
       }
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "name": "list_find_leads_tools",
-      "description": "List the lead searches beyond the two you already hold, and what each one is for. Call it whenever somebody asks for leads in a way find_people and find_companies do not cover: companies hiring for a role (open jobs, 'who is hiring SDRs', the hiring play), companies resembling the ones already sold to (lookalikes, similar companies, 'more like these'), businesses on a map near a place (restaurants, dentists, plumbers, shops within a radius of an address, unclaimed or poorly rated listings), the sites linking to a domain or page (backlinks, 'who links to them', 'who mentions our competitor'), the results Google shows for searches somebody writes (Google results, search results, a SERP, site:linkedin.com/in searches, 'best X agencies' lists, one row per result), the people whose own LinkedIn posts carry a phrase ('who is posting about revenue operations', people talking about a topic, thought leaders on a subject), the hostnames under a company's domain, and the saved searches, the search history and the starter searches a workspace can run, including reading a saved search's filters and running a saved search or a past one again ('run my saved search again'), and list_search_filters, which reads every filter a search takes exactly as the Find leads page offers them. It also lists the 12 BUYING SIGNAL searches, which are how somebody is found because of something that just happened: a LinkedIn or X post or comment, a YouTube video, a Reddit thread, a Product Hunt launch, a Hacker News thread, GitHub activity, and a person changing jobs. Call this before telling anybody the product cannot find leads a certain way. Free, and it calls nothing.",
+      "description": "List the lead searches beyond find_people and find_companies, the two everyday ones, and what each one is for. Call it whenever somebody asks for leads in a way find_people and find_companies do not cover: companies hiring for a role (open jobs, 'who is hiring SDRs', the hiring play), companies resembling the ones already sold to (lookalikes, similar companies, 'more like these'), businesses on a map near a place (restaurants, dentists, plumbers, shops within a radius of an address, unclaimed or poorly rated listings), the sites linking to a domain or page (backlinks, 'who links to them', 'who mentions our competitor'), the results Google shows for searches somebody writes (Google results, search results, a SERP, site:linkedin.com/in searches, 'best X agencies' lists, one row per result), the people whose own LinkedIn posts carry a phrase ('who is posting about revenue operations', people talking about a topic, thought leaders on a subject), the hostnames under a company's domain, and the saved searches, the search history and the starter searches a workspace can run, including reading a saved search's filters and running a saved search or a past one again ('run my saved search again'), and list_search_filters, which reads every filter a search takes exactly as the Find leads page offers them. It also lists the 9 BUYING SIGNAL searches, which are how somebody is found because of something that just happened: a LinkedIn or X post or comment, a YouTube video, a Reddit thread, a Product Hunt launch, a Hacker News thread, GitHub activity, and a person changing jobs. Call this before telling anybody the product cannot find leads a certain way. Free, and it calls nothing.",
       "inputSchema": {
         "description": "No arguments: this lists the family and calls nothing.",
         "properties": {},
@@ -171,7 +171,7 @@
     },
     {
       "name": "list_tables",
-      "description": "List this workspace's tables with each one's row count, folder, owner and whether it is archived, most recently changed first. Start here whenever a person refers to a table by name, because every other table tool needs the id this gives you; a name search finds archived tables too, as the page's search does. Scope picks the list: every table on the list, this person's favorites or the ones they opened recently, the archived ones, the untouched ones nobody in the workspace has opened or changed for a while (what to suggest archiving; nothing archives a table by itself), the ones waiting for a folder since folders replaced tags, or Trash with the folders in it. folder narrows it to the tables directly in one folder ('which tables are in Events') and owner to one person's ('my tables', 'the ones Utku owns'). It reads no rows.",
+      "description": "List this workspace's tables with each one's row count, folder, owner and whether it is archived, most recently changed first. Start here whenever a person refers to a table by name, because every other table tool needs the id this gives you; a name search finds archived tables too, as the page's search does. Scope picks the list: every table on the list, this person's favorites or the ones they opened recently, the archived ones, the untouched ones nobody in the workspace has opened or changed for a while (what to suggest archiving; nothing archives a table by itself), the ones waiting for a folder since folders replaced tags, or Trash with the folders in it. folder narrows it to the tables directly in one folder ('which tables are in Events') and owner to one person's ('my tables', 'the ones Maya owns'). It reads no rows.",
       "inputSchema": {
         "description": "Arguments for listing the workspace's tables.",
         "properties": {
@@ -714,7 +714,7 @@
       "annotations": {
         "title": "Update a table",
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false
       }
     },
@@ -758,7 +758,7 @@
     },
     {
       "name": "list_table_tools",
-      "description": "List the rest of what can be done to a table and the rows in it, beyond reading, creating, editing and deleting. Call it when the person asks about column value distributions, frequencies, distinct and empty counts, raw CSV or Excel values, saved views, filters saved under a name (adding or removing one condition of a view, copying a view, moving a view first or last, what a new filter does to the sequences that read their contacts through a view, counted before it is saved), duplicates, favorites, folders (put these tables in a folder, make a folder, rename, move or delete one, folders inside folders), owners (who owns this, make Utku the owner, my tables), the archive (archive the old ones, the tables nobody uses, restore one back), Trash, restoring or permanently deleting a table or a folder, copying a table, a table's settings (Run automatically on new and changed rows, Keep existing results, Public link under Share as template), deleting rows by filter, re-running rows, stopping a run, seeing what has run and why cells were skipped or found nothing, rating or explaining a cell (the prompt the AI saw and what its credits paid for), who changed what, or what a table has cost. It runs nothing and costs nothing.",
+      "description": "List the rest of what can be done to a table and the rows in it, beyond reading, creating, editing and deleting. Call it when the person asks about column value distributions, frequencies, distinct and empty counts, raw CSV or Excel values, saved views, filters saved under a name (adding or removing one condition of a view, copying a view, moving a view first or last, what a new filter does to the sequences that read their contacts through a view, counted before it is saved), duplicates, favorites, folders (put these tables in a folder, make a folder, rename, move or delete one, folders inside folders), owners (who owns this, make Maya the owner, my tables), the archive (archive the old ones, the tables nobody uses, restore one back), Trash, restoring or permanently deleting a table or a folder, copying a table, a table's settings (Run automatically on new and changed rows, Keep existing results, Public link under Share as template), deleting rows by filter, re-running rows, stopping a run, seeing what has run, whether a run is still going and why cells were skipped or found nothing, rating or explaining a cell (the prompt the AI saw and what its credits paid for), who changed what, or what a table has cost. It runs nothing and costs nothing.",
       "inputSchema": {
         "description": "Takes nothing.",
         "properties": {},
@@ -1974,7 +1974,7 @@
       },
       "annotations": {
         "title": "Preview every contact's messages",
-        "readOnlyHint": true,
+        "readOnlyHint": false,
         "destructiveHint": false,
         "openWorldHint": false
       }
