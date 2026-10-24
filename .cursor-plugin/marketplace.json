@@ -1,0 +1,17 @@
+{
+  "name": "oneprofile",
+  "owner": {
+    "name": "Oneprofile",
+    "email": "support@getoneprofile.ai"
+  },
+  "metadata": {
+    "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace."
+  },
+  "plugins": [
+    {
+      "name": "oneprofile",
+      "source": "cursor",
+      "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace."
+    }
+  ]
+}

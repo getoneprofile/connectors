@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "oneprofile": {
+      "type": "http",
+      "url": "https://api.getoneprofile.ai/mcp"
+    }
+  }
+}
