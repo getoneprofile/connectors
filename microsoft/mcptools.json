@@ -2,7 +2,7 @@
   "tools": [
     {
       "name": "run_read_tool",
-      "description": "Run any Oneprofile tool that only reads, by name, when it is not on your tool list. Find the name with a list_<family>_tools tool and its arguments with describe_tool. Refuses a call that would change anything; use run_change_tool or run_send_or_remove_tool for those.",
+      "description": "Run any Oneprofile tool that only reads, by name, when it is not on your tool list. Find the name with a list_<family>_tools tool and its arguments with describe_tool. Refuses a call that would change or keep anything, or could spend credits, such as a reply draft or a saved preview: use run_change_tool for those, or run_send_or_remove_tool for a send or a removal.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -31,7 +31,7 @@
     },
     {
       "name": "run_change_tool",
-      "description": "Run any Oneprofile tool that changes the workspace, by name, when it is not on your tool list: creates, edits, runs and searches that save. Find the name with a list_<family>_tools tool and its arguments with describe_tool. Refuses reads (use run_read_tool) and anything that sends to people, removes something or moves money (use run_send_or_remove_tool). A priced call's answer says what it was priced at.",
+      "description": "Run any Oneprofile tool that changes the workspace, by name, when it is not on your tool list: creates, edits, runs, searches that save, and the drafts and previews it keeps. Find the name with a list_<family>_tools tool and its arguments with describe_tool. Refuses reads (use run_read_tool) and anything that sends to people, removes something or moves money (use run_send_or_remove_tool). A priced call's answer says what it was priced at.",
       "inputSchema": {
         "type": "object",
         "properties": {
