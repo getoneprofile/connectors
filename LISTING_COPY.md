@@ -6,11 +6,11 @@ The one source for every listing in this repo: Claude (`claude/`), ChatGPT (`cha
 
 Oneprofile. Always one word, lower-case "p".
 
-## Tagline (39 characters)
+## Tagline (28 characters, fits ChatGPT's 30)
 
-Find, enrich and reach the right people
+Find, enrich and reach leads
 
-Used as the ChatGPT short description. It matches the website title.
+Used as the ChatGPT short description (shown as the subtitle).
 
 ## Short description (96 characters, fits the Registry's 100)
 
@@ -40,7 +40,7 @@ Replace `[App]` with Claude, ChatGPT, Copilot or Cursor's agent, and `[package]`
 >
 > Requirements: You need a Oneprofile account. A read-only connection can look things up on any plan; making changes needs a paid Oneprofile plan. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 
-ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and plan offers. In the ChatGPT copy, the first bullet ends "Matches are counted before anything is saved." and the requirements paragraph reads:
+ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and plan offers. In the ChatGPT copy, the first bullet ends "Matches are counted before anything is saved.", the reporting bullet ends "including replies, positive replies and bounces.", the credits sentence at the end of "How it works" is left out, capability 7 reads "Report on outreach results", and the requirements paragraph reads:
 
 > Requirements: You need a Oneprofile account. When you connect, choose read only to let ChatGPT look things up without changing anything, or read and write. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 

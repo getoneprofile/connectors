@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "oneprofile",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace.",
   "author": {
     "name": "Oneprofile",
@@ -25,8 +25,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Oneprofile",
-        "shortDescription": "Find, enrich and reach the right people",
-        "longDescription": "Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This plugin lets ChatGPT do that work in your Oneprofile workspace from a conversation.\n\nWhat you can ask for:\n- Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, or act on a recent signal such as a job change or a product launch. Matches are counted before anything is saved.\n- Save the matches to a table, or bring in a pasted list, a file or records from a connected CRM such as HubSpot, Salesforce, Pipedrive or Attio, and send results back to your CRM or out as CSV.\n- Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers. Save a research agent that learns from your feedback on its answers.\n- Build an email and LinkedIn sequence for a table, preview the messages it will send, and clear what blocks its launch.\n- Work through replies: summarize what came in, label conversations, and draft answers.\n- Report how your outreach is doing, including replies, positive replies, bounces and credits used.\n\nHow it works: ChatGPT acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up, changing your workspace, and sending to people or removing something are three separate kinds of tool, so each kind can be approved on its own. Actions that spend your workspace's Oneprofile credits report what they used, and the skills tell you the price and wait for your go-ahead before spending.\n\nRequirements: You need a Oneprofile account. When you connect, choose read only to let ChatGPT look things up without changing anything, or read and write. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.",
+        "shortDescription": "Find, enrich and reach leads",
+        "longDescription": "Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This plugin lets ChatGPT do that work in your Oneprofile workspace from a conversation.\n\nWhat you can ask for:\n- Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, or act on a recent signal such as a job change or a product launch. Matches are counted before anything is saved.\n- Save the matches to a table, or bring in a pasted list, a file or records from a connected CRM such as HubSpot, Salesforce, Pipedrive or Attio, and send results back to your CRM or out as CSV.\n- Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers. Save a research agent that learns from your feedback on its answers.\n- Build an email and LinkedIn sequence for a table, preview the messages it will send, and clear what blocks its launch.\n- Work through replies: summarize what came in, label conversations, and draft answers.\n- Report how your outreach is doing, including replies, positive replies and bounces.\n\nHow it works: ChatGPT acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up, changing your workspace, and sending to people or removing something are three separate kinds of tool, so each kind can be approved on its own.\n\nRequirements: You need a Oneprofile account. When you connect, choose read only to let ChatGPT look things up without changing anything, or read and write. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.",
         "developerName": "Oneprofile",
         "category": "Business & Operations",
         "capabilities": [
@@ -36,7 +36,7 @@
           "Research and score accounts with AI",
           "Build email and LinkedIn sequences and clear their launch checks",
           "Summarize, label and draft answers to replies",
-          "Report on outreach results and credits used"
+          "Report on outreach results"
         ],
         "websiteURL": "https://www.getoneprofile.ai",
         "supportURL": "https://docs.getoneprofile.ai",
