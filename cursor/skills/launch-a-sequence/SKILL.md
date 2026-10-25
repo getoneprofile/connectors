@@ -13,7 +13,7 @@ Build a draft sequence from a table, let the user judge real messages, clear wha
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something or changes where a payout goes. Launching, resuming and test sends go through this runner.
+- `run_send_or_remove_tool` for a call that sends to people, removes something, changes where a payout goes or loosens what waits for a person's approval. Launching, resuming and test sends go through this runner.
 
 Read exact arguments with `describe_tool` (up to 8 names per call). When a runner refuses a call, it names the runner to use.
 
@@ -37,7 +37,7 @@ Call `build_sequence` with:
 - `table_id`, and `view_id` when writing to only part of the table
 - `intent`, plus the goal and voice the user described
 - `senders`: leave it empty when the workspace has one sender, since it is assigned for you, or to choose later. List them with `list_senders`.
-- `steps`: leave it empty. The sequence is then built on a tested campaign tailored to this audience. Give steps only when the user specified the cadence, because what you give replaces the cadence whole.
+- `steps`: leave it empty. The sequence is then built on a library campaign tailored to this audience. Give steps only when the user specified the cadence, because what you give replaces the cadence whole.
 
 `build_sequence` builds email steps only. To add LinkedIn steps or condition branches, or to replace the emails with LinkedIn steps, use `edit_sequence_steps` after it.
 

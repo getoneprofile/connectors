@@ -13,7 +13,7 @@ The Oneprofile MCP server lists the everyday tools by name, including `list_tabl
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something or changes where a payout goes
+- `run_send_or_remove_tool` for a call that sends to people, removes something, changes where a payout goes or loosens what waits for a person's approval
 
 `run_table_column` always goes through a runner: `dry_run: true` makes it a read, and a real run is a change. Column tools beyond the everyday ones are listed by `list_column_tools`, and table tools by `list_table_tools`. Read exact arguments with `describe_tool` (up to 8 names per call). When a runner refuses a call, it names the runner to use.
 
@@ -41,7 +41,7 @@ If key inputs are missing, say so before spending. A work email lookup with no d
 - For a question none of these covers, call `draft_ai_column` (free) to draft the prompt and its outputs. Give each answer its own typed output field. Never put a labelled list in one cell.
 - `list_ai_model_tiers` lists the Effort levels and what each costs per row.
 
-If the business context is empty, research and ICP scoring have nothing to judge against. Read `get_business_context` first. If it is empty, offer `write_business_context_from_website` with the user's domain. That call overwrites all six context fields, so tell the user before you run it when any of them already has text.
+If the business context is empty, research and ICP scoring have nothing to judge against. Read `get_business_context` first. If it is empty, offer `write_business_context_from_website` with the user's domain. That call overwrites every business context field, so tell the user before you run it when any of them already has text.
 
 **A saved agent**: find it with `list_agents`, then `deploy_agent_as_column`.
 
@@ -53,7 +53,7 @@ Adding a column spends nothing. Running it does.
 
 ## 3. Price it
 
-Call `run_table_column` with `dry_run: true` through `run_read_tool`. It returns the price, often as "Up to N credits · usually about M". Tell the user both figures. If the total is large, check `get_credit_balance` and say what will be left.
+Call `run_table_column` with `dry_run: true` through `run_read_tool`. It returns the price, often as "about M credits, up to N": what it usually costs, then the most it can cost. Tell the user both figures. If the total is large, check `get_credit_balance` and say what will be left.
 
 Wait for a go-ahead unless the user already told you to go ahead and spend.
 
@@ -77,14 +77,14 @@ Report results in the user's terms: how many rows got an email, how many compani
 
 ### Example
 
-> Added **ICP fit** and ran it on the first 10 rows. Price: Up to [N] credits.
+> Added **ICP fit** and ran it on the first 10 rows. Price: About [M] credits · up to [N].
 >
 > | Company | Fit | Why |
 > | --- | --- | --- |
 > | Northwind Pay | Strong | Payments API, about 200 staff, hiring in RevOps |
 > | Ledgerly | Partial | Right size, but sells only to small businesses |
 >
-> These look right to me. Running the other 290 rows comes to up to [N] credits, usually about [M]. Shall I run them?
+> These look right to me. Running the other 290 rows comes to about [M] credits, up to [N]. Shall I run them?
 
 Every figure comes from the tool's own answer. Never estimate a price yourself.
 

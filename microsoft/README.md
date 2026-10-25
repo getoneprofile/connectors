@@ -7,7 +7,7 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 | Path | What it is |
 | --- | --- |
 | `manifest.json` | Microsoft 365 app manifest (schema 1.30) declaring the MCP server under `agentConnectors`, with its OAuth settings read from Azure Key Vault |
-| `mcptools.json` | The server's `tools/list` answer for a read-and-write connection |
+| `mcptools.json` | The server's `tools/list` answer for a read and write connection |
 | `intro.md` | Public documentation: tools, sign-in, getting started, known issues and limitations |
 | `color.png`, `outline.png` | Full-bleed color icon (192 px) and white-on-transparent outline icon (32 px) |
 

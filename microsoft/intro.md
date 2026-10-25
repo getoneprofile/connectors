@@ -20,8 +20,8 @@ The server acts as you, in the one Oneprofile workspace you pick when you sign i
 | Tool | What it does |
 | --- | --- |
 | `run_read_tool` | Runs any Oneprofile tool that looks things up, by name. A call of another kind is refused with the runner to use. |
-| `run_change_tool` | Runs any Oneprofile tool that changes the workspace, by name: creates, edits, runs and searches that save. A priced call's answer says what it was priced at. |
-| `run_send_or_remove_tool` | Runs a tool that sends to people outside the workspace, removes or overwrites something, or changes where a payout goes. Only those. |
+| `run_change_tool` | Runs any Oneprofile tool that changes the workspace, by name: creates, edits, runs and searches that save, and the reply drafts and previews it keeps. A priced call's answer says what it was priced at. |
+| `run_send_or_remove_tool` | Runs a tool that sends to people outside the workspace, removes or overwrites something, changes where a payout goes, or loosens what waits for a person's approval. Only those. |
 | `describe_tool` | Reads any tool in full: what it does, what it answers with, and every argument. |
 
 ### Tables and leads
@@ -32,8 +32,8 @@ The server acts as you, in the one Oneprofile workspace you pick when you sign i
 | `get_table` | Reads one table: its columns, row count, folder, owner and settings. |
 | `read_table_rows` | Reads a table's rows, filtered, sorted and searched. |
 | `create_table` | Creates a table, empty or filled from pasted CSV. |
-| `import_file_as_table` | Builds a table from an attached file of any size. |
-| `read_file` | Reads an attached file's rows as CSV. |
+| `import_file_as_table` | Builds a table from a file attached in Oneprofile's own assistant chat. |
+| `read_file` | Reads the rows of a file attached in Oneprofile's own assistant chat as CSV. |
 | `update_table` | Renames a table or changes its description. |
 | `add_table_column` | Adds a column: a plain column, a formula, an enrichment lookup or an AI research column. |
 | `list_find_leads_tools` | Lists the lead searches: people, companies, local businesses, lookalikes and buying signals. |
@@ -69,9 +69,9 @@ Sign-in is OAuth 2.1, using the authorization code flow with PKCE. When you conn
 
 1. Add the Oneprofile connector to your agent, or turn it on where your organization makes it available.
 2. Sign in when asked, pick a workspace and choose the access to give.
-3. Ask in your own words, such as "find heads of RevOps at Series B fintechs in London", "find work emails for the people in my newest table" or "what replies came in this week, and who is interested?".
+3. Ask in your own words, such as "find heads of RevOps at Series B fintech companies in London", "find work emails for the people in my newest table" or "what replies came in this week, and who is interested?".
 
-Looking things up, counting search matches and reading your workspace are free. Creating a table from a search, running enrichment or research columns, and launching sequences spend Oneprofile credits from your workspace balance.
+Searching, counting search matches and reading your workspace are free. Creating a table from a search, running enrichment or research columns, and launching sequences spend Oneprofile credits from your workspace balance.
 
 ## Known issues and limitations
 
@@ -93,7 +93,7 @@ The connector is free. Actions that spend credits use the credits your Oneprofil
 
 ### How do I disconnect?
 
-In Oneprofile, open **Settings > AI apps** and click **Disconnect** beside the connection, or remove the connector in Copilot.
+In Oneprofile, open **Settings > Connections > Claude & ChatGPT** and click **Disconnect** beside the connection, or remove the connector in Copilot.
 
 ### Where is my data processed?
 

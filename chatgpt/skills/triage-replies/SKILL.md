@@ -13,7 +13,7 @@ Get the user from "what came in?" to every conversation handled. Reading and lab
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace, such as labels, done or snooze
-- `run_send_or_remove_tool` for a call that sends to people or removes something. Sending a reply, forwarding and approving queued messages go through this runner.
+- `run_send_or_remove_tool` for a call that sends to people, removes something or loosens what waits for a person's approval. Sending a reply, forwarding and approving queued messages go through this runner.
 
 Read exact arguments with `describe_tool` (up to 8 names per call). When a runner refuses a call, it names the runner to use.
 

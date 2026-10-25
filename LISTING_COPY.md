@@ -29,18 +29,18 @@ Replace `[App]` with Claude, ChatGPT, Copilot or Cursor's agent, and `[package]`
 > Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This [package] lets [App] do that work in your Oneprofile workspace from a conversation.
 >
 > What you can ask for:
-> - Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, or act on a recent signal such as a job change or a product launch. Matches are counted for free before anything is saved.
+> - Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, or act on a recent signal such as a job change or a product launch. Most searches are counted for free before anything is saved.
 > - Save the matches to a table, or bring in a pasted list, a file or records from a connected CRM such as HubSpot, Salesforce, Pipedrive or Attio, and send results back to your CRM or out as CSV.
 > - Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers. Save a research agent that learns from your feedback on its answers.
 > - Build an email and LinkedIn sequence for a table, preview the messages it will send, and clear what blocks its launch.
 > - Work through replies: summarize what came in, label conversations, and draft answers.
 > - Report how your outreach is doing, including replies, positive replies, bounces and credits used.
 >
-> How it works: [App] acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up, changing your workspace, and sending to people or removing something are three separate kinds of tool, so each kind can be approved on its own. Actions that spend your workspace's Oneprofile credits report what they used, and the skills tell you the price and wait for your go-ahead before spending.
+> How it works: [App] acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up, changing your workspace, and sending to people or removing something are three separate kinds of tool, so each kind can be approved on its own. Actions that spend your workspace's Oneprofile credits say the price they ran at, and Oneprofile asks [App] to tell you the price and wait for your go-ahead before spending.
 >
 > Requirements: You need a Oneprofile account. A read-only connection can look things up on any plan; making changes needs a paid Oneprofile plan. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 
-ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and plan offers. In the ChatGPT copy, the first bullet ends "Matches are counted before anything is saved.", the reporting bullet ends "including replies, positive replies and bounces.", the credits sentence at the end of "How it works" is left out, capability 7 reads "Report on outreach results", and the requirements paragraph reads:
+ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and plan offers. In the ChatGPT copy, the first bullet ends "Most searches are counted before anything is saved.", the reporting bullet ends "including replies, positive replies and bounces.", the credits sentence at the end of "How it works" is left out, capability 7 reads "Report on outreach results", and the requirements paragraph reads:
 
 > Requirements: You need a Oneprofile account. When you connect, choose read only to let ChatGPT look things up without changing anything, or read and write. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 

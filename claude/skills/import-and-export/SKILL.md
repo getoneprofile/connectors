@@ -13,7 +13,7 @@ Get an existing list into a Oneprofile table so it can be researched and reached
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something or changes where a payout goes
+- `run_send_or_remove_tool` for a call that sends to people, removes something, changes where a payout goes or loosens what waits for a person's approval
 
 Read exact arguments with `describe_tool` (up to 8 names per call). When a runner refuses a call, it names the runner to use.
 
@@ -27,7 +27,7 @@ Read exact arguments with `describe_tool` (up to 8 names per call). When a runne
 4. Call `create_table` with a name in the user's words.
 5. Check it with `get_table` and a few rows from `read_table_rows`, then say how many rows and columns landed.
 
-**More than 200 rows**: `create_table` refuses them. Point the user to **Import from file** on the [Tables page](https://app.getoneprofile.ai/tables). It takes CSV and `.xlsx` up to 50 MB, with any number of rows, and types each column. Offer to load the first 200 rows now if they want to try the workflow first. Don't split a list across several tables unless they ask.
+**More than 200 rows**: `create_table` refuses them. Point the user to **Import from file** on the [Tables page](https://app.getoneprofile.ai/tables). It takes CSV and `.xlsx` up to 50 MB, with as many rows as your plan holds, and types each column. Offer to load the first 200 rows now if they want to try the workflow first. Don't split a list across several tables unless they ask.
 
 `import_file_as_table` and `read_file` only work with files attached inside Oneprofile's own assistant chat. Don't use them here.
 

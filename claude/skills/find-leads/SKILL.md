@@ -13,7 +13,7 @@ The Oneprofile connector lists the everyday tools by name. Every other tool name
 
 - `run_read_tool` for a call that only reads
 - `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something or changes where a payout goes
+- `run_send_or_remove_tool` for a call that sends to people, removes something, changes where a payout goes or loosens what waits for a person's approval
 
 `find_people` and `find_companies` always go through a runner, because the same tool counts (a read) or lands a table (a change) depending on its arguments. Read exact arguments with `describe_tool` (up to 8 names per call). Send each argument as its JSON type: `true`, never `"true"`. When a runner refuses a call, it names the runner to use; call again through that one.
 
@@ -99,7 +99,7 @@ A people table has no company size or revenue column, even when those were filte
 
 After the user agrees:
 
-> Price: Up to [the figure the tool returned] credits.
+> Price: [the price line the tool returned].
 >
 > Created **UK fintech RevOps** with 300 people (12 skipped, already in your tables). Work emails are filling in now. [Open in Oneprofile](…)
 >

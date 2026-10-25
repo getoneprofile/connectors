@@ -9,7 +9,7 @@ Give a short, honest status of the user's outreach and workspace, built only fro
 
 ## Reaching the tools
 
-`get_sequence` and `read_inbox` are listed by name. The analytics tools are listed by `list_sequence_tools`, billing by `list_billing_tools`, the approval queue by `list_task_tools` and mailboxes by `list_mailbox_tools`. Reach them through `run_read_tool`, passing `{"name": "<tool>", "arguments": {...}}`. Read exact arguments with `describe_tool` (up to 8 names per call).
+`get_sequence` and `read_inbox` are listed by name. The analytics tools are listed by `list_sequence_tools`, credit balance and spend by `list_billing_tools`, the approval queue by `list_task_tools` and mailboxes by `list_mailbox_tools`. Reach them through `run_read_tool`, passing `{"name": "<tool>", "arguments": {...}}`. Read exact arguments with `describe_tool` (up to 8 names per call).
 
 ## 1. Pick the window
 
@@ -67,4 +67,4 @@ Each suggestion should name what you would do. For optimisation advice beyond th
 
 - Acting on the replies: the `triage-replies` skill
 - Changing a sequence's copy, steps or senders: the `launch-a-sequence` skill
-- Buying credits: `get_billing_portal_link` returns a link for the user to open. You cannot buy credits or change plans.
+- A low credit balance: say what is left and that credits are managed under Credits and billing in Oneprofile's settings. You can't buy credits or change plans, so don't offer to.
