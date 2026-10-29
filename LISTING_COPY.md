@@ -29,7 +29,7 @@ Replace `[App]` with Claude, ChatGPT, Copilot or Cursor's agent, and `[package]`
 > Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This [package] lets [App] do that work in your Oneprofile workspace from a conversation.
 >
 > What you can ask for:
-> - Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, or act on a recent signal such as a job change or a product launch. Most searches are counted for free before anything is saved.
+> - Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, act on a recent signal such as a job change, or find startups that just launched. Most searches are counted for free before anything is saved.
 > - Save the matches to a table, or bring in a pasted list, a file or records from a connected CRM such as HubSpot, Salesforce, Pipedrive or Attio, and send results back to your CRM or out as CSV.
 > - Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers. Save a research agent that learns from your feedback on its answers.
 > - Build an email and LinkedIn sequence for a table, preview the messages it will send, and clear what blocks its launch.
@@ -83,7 +83,7 @@ Features (`description.features`):
 
 | Title | Description |
 | --- | --- |
-| Find and save leads | Search people and companies by title, industry, size, location or buying signal, counted free before saving. |
+| Find and save leads | Search people and companies by title, industry, size, location or buying signal. Most count free before saving. |
 | Enrich and research | Fill in work emails, phone numbers and company details, or research and score each account with AI. |
 | Run outreach and work replies | Build email and LinkedIn sequences, clear their launch checks, and summarize, label and answer replies. |
 

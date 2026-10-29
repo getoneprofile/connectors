@@ -8,7 +8,7 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 
 - A Oneprofile account. Sign up at [getoneprofile.ai](https://www.getoneprofile.ai).
 - A workspace on a paid Oneprofile plan, to make changes. On any plan, a read-only connection can look things up.
-- To send email, a Google Workspace mailbox connected in Oneprofile. Microsoft 365 / Outlook mailboxes are coming soon.
+- To send email, a Google Workspace mailbox connected in Oneprofile. Microsoft 365 / Outlook mailboxes are not supported yet.
 - For LinkedIn steps, the Oneprofile browser extension, signed in to the sender's own LinkedIn account.
 
 ## Supported operations
@@ -46,7 +46,7 @@ The server acts as you, in the one Oneprofile workspace you pick when you sign i
 | Tool | What it does |
 | --- | --- |
 | `get_sequence` | Reads one sequence in full: its status, audience, senders, steps and launch checks. |
-| `build_sequence` | Builds a draft email sequence in one go. LinkedIn steps are added afterwards with `edit_sequence_steps`. |
+| `build_sequence` | Builds a draft sequence in one go: three emails, or three emails and a LinkedIn connection request. Other LinkedIn steps are added afterwards with `edit_sequence_steps`. |
 | `write_sequence_previews` | Writes and shows the messages a sequence will send to up to ten contacts. |
 | `read_inbox` | Reads the replies waiting in the shared inbox, as summaries. |
 | `list_sequence_tools`, `list_message_tools`, `list_sender_tools`, `list_mailbox_tools`, `list_outbound_agent_tools` | List the tools for sequences, their wording, who they send as, the mailboxes they send through and the AI writer behind them. |
@@ -76,7 +76,7 @@ Searching, counting search matches and reading your workspace are free. Creating
 ## Known issues and limitations
 
 - Making changes needs a Oneprofile workspace on a paid plan. On any other plan, every connection is read-only, whatever was chosen at sign-in.
-- Email sends only from a Google Workspace mailbox connected in Oneprofile. Microsoft 365 / Outlook mailboxes are coming soon.
+- Email sends only from a Google Workspace mailbox connected in Oneprofile. Microsoft 365 / Outlook mailboxes are not supported yet.
 - LinkedIn steps run in the sender's own browser through the Oneprofile extension.
 - A connection works in one workspace. To work in another, connect again and pick it.
 - A connection that goes unused for 30 days signs out, and you sign in again.
