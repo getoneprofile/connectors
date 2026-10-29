@@ -4,3 +4,4 @@ desktop.ini
 __MACOSX/
 *.zip
 dist/
+.env
