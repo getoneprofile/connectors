@@ -29,6 +29,7 @@ Replace `[App]` with Claude, ChatGPT, Copilot or Cursor's agent, and `[package]`
 > Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This [package] lets [App] do that work in your Oneprofile workspace from a conversation.
 >
 > What you can ask for:
+> - Set up your first sequence from your company website: Oneprofile suggests who to reach, finds up to 100 people, writes to as many as your credits cover, and starts sending once you connect your Google account.
 > - Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, act on a recent signal such as a job change, or find startups that just launched. Most searches are counted for free before anything is saved.
 > - Save the matches to a table, or bring in a pasted list, a file or records from a connected CRM such as HubSpot, Salesforce, Pipedrive or Attio, and send results back to your CRM or out as CSV.
 > - Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers. Save a research agent that learns from your feedback on its answers.
@@ -38,26 +39,28 @@ Replace `[App]` with Claude, ChatGPT, Copilot or Cursor's agent, and `[package]`
 >
 > How it works: [App] acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up, changing your workspace, and sending to people or removing something are three separate kinds of tool, so each kind can be approved on its own. Actions that spend your workspace's Oneprofile credits say the price they ran at, and Oneprofile asks [App] to tell you the price and wait for your go-ahead before spending.
 >
-> Requirements: You need a Oneprofile account. A read-only connection can look things up on any plan; making changes needs a paid Oneprofile plan. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
+> Requirements: You need a Oneprofile account. A read-only connection can look things up; making changes spends your workspace's credits, and every new workspace starts with the free plan's 200 a month. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 
-ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and plan offers. In the ChatGPT copy, the first bullet ends "Most searches are counted before anything is saved.", the reporting bullet ends "including replies, positive replies and bounces.", the credits sentence at the end of "How it works" is left out, capability 7 reads "Report on outreach results", and the requirements paragraph reads:
+ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and plan offers. In the ChatGPT copy, the first bullet ends "Most searches are counted before anything is saved.", the reporting bullet ends "including replies, positive replies and bounces.", the credits sentence at the end of "How it works" is left out, capability 8 reads "Report on outreach results", and the requirements paragraph reads:
 
 > Requirements: You need a Oneprofile account. When you connect, choose read only to let ChatGPT look things up without changing anything, or read and write. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 
 ## Capabilities
 
-1. Find people and companies that match your ideal customer or show a buying signal
-2. Save search results, pasted lists, files or CRM records to a table
-3. Fill in work emails, phone numbers and company details
-4. Research and score accounts with AI
-5. Build email and LinkedIn sequences and clear their launch checks
-6. Summarize, label and draft answers to replies
-7. Report on outreach results and credits used
+1. Set up your first sequence from your website
+2. Find people and companies that match your ideal customer or show a buying signal
+3. Save search results, pasted lists, files or CRM records to a table
+4. Fill in work emails, phone numbers and company details
+5. Research and score accounts with AI
+6. Build email and LinkedIn sequences and clear their launch checks
+7. Summarize, label and draft answers to replies
+8. Report on outreach results and credits used
 
 ## Starter prompts
 
 General:
 
+- Set up my first sequence from my website.
 - Find heads of RevOps at Series B fintech companies in London.
 - Find work emails for the people in my newest table.
 - What replies came in this week, and who is interested?
@@ -66,6 +69,7 @@ One per skill:
 
 | Skill | Display name | Prompt |
 | --- | --- | --- |
+| `set-up-your-first-sequence` | Set up your first sequence | Set up my first sequence from my website. |
 | `find-leads` | Find leads | Find heads of RevOps at Series B fintech companies in London. |
 | `import-and-export` | Import and export | Turn this list of companies into a Oneprofile table. |
 | `enrich-a-table` | Enrich a table | Find work emails for the people in my newest table. |

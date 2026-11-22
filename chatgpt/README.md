@@ -5,7 +5,7 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 It bundles two things:
 
 - **The Oneprofile MCP server** at `https://api.getoneprofile.ai/mcp`, signed in with OAuth. It gives ChatGPT the same tools the AI Assistant inside Oneprofile has, acting as you, in the one workspace you pick when you sign in.
-- **Six skills** that tell ChatGPT when and how to use those tools: `find-leads`, `enrich-a-table`, `import-and-export`, `launch-a-sequence`, `triage-replies` and `outreach-review`.
+- **Seven skills** that tell ChatGPT when and how to use those tools: `set-up-your-first-sequence`, `find-leads`, `enrich-a-table`, `import-and-export`, `launch-a-sequence`, `triage-replies` and `outreach-review`.
 
 ## Package layout
 

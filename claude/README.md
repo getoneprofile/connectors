@@ -5,12 +5,13 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 It bundles two things:
 
 - **The Oneprofile connector**, Oneprofile's remote MCP server at `https://api.getoneprofile.ai/mcp`. It gives Claude the same tools the AI Assistant inside Oneprofile has, acting as you, in the one workspace you pick when you sign in.
-- **Six skills** that tell Claude when and how to use those tools: which step comes first, what is free and what costs credits, and what to confirm with you before anything is sent or removed.
+- **Seven skills** that tell Claude when and how to use those tools: which step comes first, what is free and what costs credits, and what to confirm with you before anything is sent or removed.
 
 ## Skills
 
 | Skill | Use it when you want to |
 | --- | --- |
+| `set-up-your-first-sequence` | Set up a new workspace's first sequence from your website, in the five steps of Oneprofile's setup page |
 | `find-leads` | Turn a description of who you sell to into a counted search, then a table of people or companies |
 | `import-and-export` | Bring a CSV, a pasted list or records from a connected tool such as your CRM into a table, and send results back to your CRM or out as CSV |
 | `enrich-a-table` | Fill in work emails, phone numbers, company details or AI research on a table's rows |
@@ -24,7 +25,7 @@ You don't need to name a skill. Ask in your own words, such as "find heads of Re
 
 1. Install the plugin from the Claude directory.
 2. Open the plugin's **Connectors** tab and connect **Oneprofile**. In Claude Code, run `/mcp`, choose the Oneprofile server and sign in from the browser tab it opens.
-3. Sign in to Oneprofile, pick the workspace Claude should work in, and choose **Read and write** or **Read only**. Read only lets Claude look things up and never change them. Making changes from an AI app needs a paid Oneprofile plan.
+3. Sign in to Oneprofile, pick the workspace Claude should work in, and choose **Read and write** or **Read only**. Read only lets Claude look things up and never change them. Making changes spends your workspace's Oneprofile credits, and every new workspace starts with the free plan's.
 
 Email steps send from a Google Workspace mailbox connected in Oneprofile, and LinkedIn steps run in your browser through the Oneprofile extension.
 
