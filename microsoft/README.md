@@ -15,7 +15,7 @@ Build the upload ZIP from this folder with `KEY_VAULT_URI=https://<vault>.vault.
 
 ## Data and safety
 
-The package holds no secrets and runs no code. Everything Copilot does in Oneprofile goes through the MCP server to `api.getoneprofile.ai`, over HTTPS, signed in with the person's own Oneprofile account. Reads, changes, and sends or removals reach Oneprofile through separate tools, so each kind can be approved on its own. Oneprofile processes data under its [privacy policy](https://www.getoneprofile.ai/privacy-policy) and [terms](https://www.getoneprofile.ai/terms).
+The package holds no secrets and runs no code. Everything Copilot does in Oneprofile goes through the MCP server to `api.getoneprofile.ai`, over HTTPS, signed in with the person's own Oneprofile account. Each tool does one job and says whether it only reads, changes the workspace, or can send or remove something, so each can be approved on its own. Oneprofile processes data under its [privacy policy](https://www.getoneprofile.ai/privacy-policy) and [terms](https://www.getoneprofile.ai/terms).
 
 ## Support
 

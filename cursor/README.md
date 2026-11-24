@@ -4,7 +4,7 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 
 It bundles two things:
 
-- **The Oneprofile MCP server**, Oneprofile's remote server at `https://api.getoneprofile.ai/mcp`. It gives the agent the same tools the AI Assistant inside Oneprofile has, acting as you, in the one workspace you pick when you sign in.
+- **The Oneprofile MCP server**, Oneprofile's remote server at `https://api.getoneprofile.ai/mcp`. It gives the agent the everyday tools of the AI Assistant inside Oneprofile, acting as you, in the one workspace you pick when you sign in.
 - **Seven skills** that tell the agent when and how to use those tools: which step comes first, what is free and what costs credits, and what to confirm with you before anything is sent or removed.
 
 ## Skills
@@ -33,11 +33,11 @@ There is no API key or client ID to configure. You need a Oneprofile account. Si
 
 ## What it costs
 
-Searching, counting search matches and reading your workspace are free. Creating a table from a search, running enrichment or research columns, and launching sequences spend Oneprofile credits from your workspace balance. The skills tell the agent to say what a step will cost before it spends, and every priced change it makes comes back with the price it ran at. A lookup that finds nothing is not charged.
+Searching, counting search matches and reading your workspace are free. Creating a table from a search, running enrichment or research columns, and launching sequences spend Oneprofile credits from your workspace balance. The skills tell the agent to say what a step will cost before it spends, and every priced change it makes comes back with the price it ran at. Most lookups that find nothing are not charged.
 
 ## Safety and approvals
 
-The agent works as you, so what it changes counts as your change. Oneprofile's tools come in three separate kinds: one for looking things up, one that changes your workspace, and one for anything that sends to people outside your workspace, removes something, changes where a payout goes or loosens what waits for a person's approval. Cursor asks before running MCP tools unless you have allowed them, so you can let the agent look things up freely and still approve every send. The skills also tell the agent to ask you before it launches a sequence, sends a reply or deletes anything.
+The agent works as you, so what it changes counts as your change. Each Oneprofile tool does one job and says whether it only looks things up, changes your workspace, or can send to people outside it, remove or overwrite something. Cursor asks before running MCP tools unless you have allowed them, so you can let the agent look things up freely and still approve every send. The skills also tell the agent to ask you before it launches a sequence, sends a reply or deletes anything.
 
 ## Data and privacy
 

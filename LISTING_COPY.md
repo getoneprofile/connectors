@@ -30,14 +30,14 @@ Replace `[App]` with Claude, ChatGPT, Copilot or Cursor's agent, and `[package]`
 >
 > What you can ask for:
 > - Set up your first sequence from your company website: Oneprofile suggests who to reach, finds up to 100 people, writes to as many as your credits cover, and starts sending once you connect your Google account.
-> - Find people or companies by title, seniority, industry, size, location, technology or funding, find companies that are hiring or look like your best customers, act on a recent signal such as a job change, or find startups that just launched. Most searches are counted for free before anything is saved.
+> - Find people or companies by title, seniority, industry, size, location, technology or funding, or find companies that look like your best customers. Most searches are counted for free before anything is saved.
 > - Save the matches to a table, or bring in a pasted list, a file or records from a connected CRM such as HubSpot, Salesforce, Pipedrive or Attio, and send results back to your CRM or out as CSV.
-> - Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers. Save a research agent that learns from your feedback on its answers.
+> - Fill in work emails, phone numbers and company details, or research each row with AI: fit against your ideal customer, company and person research, and personalized openers.
 > - Build an email and LinkedIn sequence for a table, preview the messages it will send, and clear what blocks its launch.
 > - Work through replies: summarize what came in, label conversations, and draft answers.
-> - Report how your outreach is doing, including replies, positive replies, bounces and credits used.
+> - Report how your outreach is doing, including replies, positive replies, bounces and credits left.
 >
-> How it works: [App] acts as you, in the one Oneprofile workspace you pick when you sign in, with the same tools as the AI Assistant inside Oneprofile. Looking things up, changing your workspace, and sending to people or removing something are three separate kinds of tool, so each kind can be approved on its own. Actions that spend your workspace's Oneprofile credits say the price they ran at, and Oneprofile asks [App] to tell you the price and wait for your go-ahead before spending.
+> How it works: [App] acts as you, in the one Oneprofile workspace you pick when you sign in, with the everyday tools of the AI Assistant inside Oneprofile. Each tool does one job and says whether it only looks things up, changes your workspace, or can send to people or remove something, so you can approve each one on its own. Actions that spend your workspace's Oneprofile credits say the price they ran at, and Oneprofile asks [App] to tell you the price and wait for your go-ahead before spending.
 >
 > Requirements: You need a Oneprofile account. A read-only connection can look things up; making changes spends your workspace's credits, and every new workspace starts with the free plan's 200 a month. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 
@@ -48,13 +48,13 @@ ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and 
 ## Capabilities
 
 1. Set up your first sequence from your website
-2. Find people and companies that match your ideal customer or show a buying signal
+2. Find people and companies that match your ideal customer
 3. Save search results, pasted lists, files or CRM records to a table
 4. Fill in work emails, phone numbers and company details
 5. Research and score accounts with AI
 6. Build email and LinkedIn sequences and clear their launch checks
 7. Summarize, label and draft answers to replies
-8. Report on outreach results and credits used
+8. Report on outreach results and credits left
 
 ## Starter prompts
 
@@ -77,7 +77,7 @@ One per skill:
 | `triage-replies` | Triage replies | What replies came in this week, and who is interested? |
 | `outreach-review` | Outreach review | How are my sequences doing this month? |
 
-The skill descriptions live in each skill's `SKILL.md` front matter and are the same on every platform. The skill bodies are the same too, except where they name the platform or how it lists the tools (connector, app, MCP server).
+The skill descriptions live in each skill's `SKILL.md` front matter and are the same on every platform. The skill bodies are written once in `shared/skills/` and built into each package with `python3 shared/build.py` (`--check` fails when one is out of date or names a tool no app is listed). Never edit a package's `SKILL.md` by hand.
 
 ## Microsoft extras
 
@@ -87,13 +87,13 @@ Features (`description.features`):
 
 | Title | Description |
 | --- | --- |
-| Find and save leads | Search people and companies by title, industry, size, location or buying signal. Most count free before saving. |
+| Find and save leads | Search people and companies by title, industry, size or location, or find similar companies. Most count free first. |
 | Enrich and research | Fill in work emails, phone numbers and company details, or research and score each account with AI. |
 | Run outreach and work replies | Build email and LinkedIn sequences, clear their launch checks, and summarize, label and answer replies. |
 
 Connector description (`agentConnectors[0].description`):
 
-> Oneprofile's MCP server: lead search, enrichment and AI research, tables, email and LinkedIn sequences, the reply inbox and outreach reporting, acting as the signed-in person in the one Oneprofile workspace they pick. Reads, changes, and sends or removals are separate tools, so each kind can be approved on its own.
+> Oneprofile's MCP server: lead search, enrichment and AI research, tables, email and LinkedIn sequences, the reply inbox and outreach reporting, acting as the signed-in person in the one Oneprofile workspace they pick. Each tool does one job and says whether it only reads, changes the workspace, or can send or remove something.
 
 `microsoft/mcptools.json` is the server's `tools/list` answer for a read and write connection. Refresh it whenever the server's tools change.
 
@@ -127,7 +127,7 @@ Cursor also adds `oneprofile` and `mcp`, for its marketplace search.
 
 ## Writing rules
 
-- Say "three kinds of tool", not "doors".
+- Say "each tool does one job", never "doors", "runner tools" or "any tool by name".
 - Say "changes where a payout goes", not "moves money".
 - No em dashes, en dashes or spaced hyphens used as dashes.
 - Don't promise that nothing happens without confirmation. Say each kind of tool can be approved on its own, and that the skills ask before launching, sending or deleting.

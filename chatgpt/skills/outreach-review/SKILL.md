@@ -1,15 +1,15 @@
 ---
 name: outreach-review
-description: Report how outreach and the Oneprofile workspace are doing. Covers replies and positive replies by sequence, which step, sender or mailbox is underperforming, bounces and deliverability, what is waiting on the team, and credits spent and left, with the next actions worth taking. Use when the user asks how campaigns or sequences are going, for a daily or weekly summary or standup, for reply rates or which email works best, why replies dropped, how many credits they have used, or what to do next.
+description: Report how outreach and the Oneprofile workspace are doing. Covers replies and positive replies by sequence, which step, sender or mailbox is underperforming, bounces and deliverability, what is waiting on the team, and credits left, with the next actions worth taking. Use when the user asks how campaigns or sequences are going, for a daily or weekly summary or standup, for reply rates or which email works best, why replies dropped, how many credits are left, or what to do next.
 ---
 
 # Outreach review
 
 Give a short, honest status of the user's outreach and workspace, built only from what the tools report, and finish with the few actions worth taking. Everything in this skill only reads, so it is free. Make no changes unless the user asks for them afterwards.
 
-## Reaching the tools
+## The tools
 
-`get_sequence` and `read_inbox` are listed by name. The analytics tools are listed by `list_sequence_tools`, credit balance and spend by `list_billing_tools`, the approval queue by `list_task_tools` and mailboxes by `list_mailbox_tools`. Reach them through `run_read_tool`, passing `{"name": "<tool>", "arguments": {...}}`. Read exact arguments with `describe_tool` (up to 8 names per call).
+Every tool named here is on the Oneprofile app's list under its own name. Send each argument as its JSON type: `true`, never `"true"`. A job with no tool here is done in Oneprofile: say so, with the link an answer gave.
 
 ## 1. Pick the window
 
@@ -24,9 +24,9 @@ Make these reads, in parallel where you can:
 - `get_sequence_performance` for each live sequence: its funnel, each step's sent, replies and bounces, and where contacts stand now
 - `read_inbox` with `view: "all"` and with `view: "needs_approval"`: what waits on the team
 - `list_approval_queue`: messages held for approval
-- `get_credit_balance` and `get_credit_spend`: what is left and what it went on
+- `get_credit_balance`: what is left.
 
-Add these when they are relevant: `list_sending_mailboxes` or `check_mailbox_activity` when bounces are high, and `list_connections` when a connected tool may be broken.
+Add `list_connections` when a connected tool may be broken. Mailbox health is in Oneprofile.
 
 ## 3. Read the replies before judging the copy
 
@@ -54,7 +54,7 @@ Lead with what matters, keep it short, and link each sequence with the link the 
 > - 3 replies wait on you in the inbox, and 2 AI drafts wait for approval
 > - Mailbox maya@outreach.example.com bounces 6.8%, above the health threshold
 >
-> **Credits**: [N] left. [M] spent this week, mostly on work emails.
+> **Credits**: [N] left.
 >
 > **Suggested next steps**
 > 1. Pause maya@outreach.example.com and check its health
@@ -67,4 +67,4 @@ Each suggestion should name what you would do. For optimisation advice beyond th
 
 - Acting on the replies: the `triage-replies` skill
 - Changing a sequence's copy, steps or senders: the `launch-a-sequence` skill
-- A low credit balance: say what is left and that credits are managed under Credits and billing in Oneprofile's settings. This app can't buy credits or change plans, so don't offer to.
+- A low credit balance: say what is left and that a workspace admin manages credits in Oneprofile's billing settings. This app can't buy credits or change plans, so don't offer to.

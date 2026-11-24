@@ -4,7 +4,7 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 
 It bundles two things:
 
-- **The Oneprofile MCP server** at `https://api.getoneprofile.ai/mcp`, signed in with OAuth. It gives ChatGPT the same tools the AI Assistant inside Oneprofile has, acting as you, in the one workspace you pick when you sign in.
+- **The Oneprofile MCP server** at `https://api.getoneprofile.ai/mcp`, signed in with OAuth. It gives ChatGPT the everyday tools of the AI Assistant inside Oneprofile, acting as you, in the one workspace you pick when you sign in.
 - **Seven skills** that tell ChatGPT when and how to use those tools: `set-up-your-first-sequence`, `find-leads`, `enrich-a-table`, `import-and-export`, `launch-a-sequence`, `triage-replies` and `outreach-review`.
 
 ## Package layout
@@ -20,7 +20,7 @@ Build the upload ZIP from this folder with `./build.sh`, which writes `dist/onep
 
 ## Data and safety
 
-The plugin stores nothing and runs no code. Everything ChatGPT does in Oneprofile goes through the MCP server to `api.getoneprofile.ai`, over HTTPS, signed in with the user's own Oneprofile account. Reads, changes, and sends or removals reach Oneprofile through separate tools, so each kind can be approved on its own, and the skills ask before launching a sequence, sending a reply or deleting anything. Oneprofile processes data under its [privacy policy](https://www.getoneprofile.ai/privacy-policy) and [terms](https://www.getoneprofile.ai/terms).
+The plugin stores nothing and runs no code. Everything ChatGPT does in Oneprofile goes through the MCP server to `api.getoneprofile.ai`, over HTTPS, signed in with the user's own Oneprofile account. Each tool does one job and says whether it only reads, changes the workspace, or can send or remove something, so each can be approved on its own, and the skills ask before launching a sequence, sending a reply or deleting anything. Oneprofile processes data under its [privacy policy](https://www.getoneprofile.ai/privacy-policy) and [terms](https://www.getoneprofile.ai/terms).
 
 ## Support
 

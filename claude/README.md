@@ -4,7 +4,7 @@ Oneprofile is a go-to-market workspace: you build lists of companies and people,
 
 It bundles two things:
 
-- **The Oneprofile connector**, Oneprofile's remote MCP server at `https://api.getoneprofile.ai/mcp`. It gives Claude the same tools the AI Assistant inside Oneprofile has, acting as you, in the one workspace you pick when you sign in.
+- **The Oneprofile connector**, Oneprofile's remote MCP server at `https://api.getoneprofile.ai/mcp`. It gives Claude the everyday tools of the AI Assistant inside Oneprofile, acting as you, in the one workspace you pick when you sign in.
 - **Seven skills** that tell Claude when and how to use those tools: which step comes first, what is free and what costs credits, and what to confirm with you before anything is sent or removed.
 
 ## Skills
@@ -33,11 +33,11 @@ You need a Oneprofile account. Sign up at [getoneprofile.ai](https://www.getonep
 
 ## What it costs
 
-Searching, counting search matches and reading your workspace are free. Creating a table from a search, running enrichment or research columns, and launching sequences spend Oneprofile credits from your workspace balance. The skills tell Claude to say what a step will cost before it spends, and every priced change Claude makes comes back with the price it ran at. A lookup that finds nothing is not charged.
+Searching, counting search matches and reading your workspace are free. Creating a table from a search, running enrichment or research columns, and launching sequences spend Oneprofile credits from your workspace balance. The skills tell Claude to say what a step will cost before it spends, and every priced change Claude makes comes back with the price it ran at. Most lookups that find nothing are not charged.
 
 ## Safety and approvals
 
-Claude works as you, so what it changes counts as your change. Oneprofile's tools come in three separate kinds: one for looking things up, one that changes your workspace, and one for anything that sends to people outside your workspace, removes something, changes where a payout goes or loosens what waits for a person's approval. Your app can ask before each kind, so you can let Claude look things up freely and still approve every send. The skills also tell Claude to ask you before it launches a sequence, sends a reply or deletes anything.
+Claude works as you, so what it changes counts as your change. Each Oneprofile tool does one job and says whether it only looks things up, changes your workspace, or can send to people outside it, remove or overwrite something. Your app can ask before each kind, so you can let Claude look things up freely and still approve every send. The skills also tell Claude to ask you before it launches a sequence, sends a reply or deletes anything.
 
 ## Data and privacy
 

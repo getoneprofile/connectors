@@ -7,19 +7,15 @@ description: Turn a Oneprofile table into an email and LinkedIn outreach sequenc
 
 Build a draft sequence from a table, let the user judge real messages, clear what blocks it, and launch only when the user says to. A draft sends nothing. A launch reaches real people and cannot be undone.
 
-## Reaching the tools
+## The tools
 
-`build_sequence`, `get_sequence` and `write_sequence_previews` are listed by name. Other sequence tools are listed by `list_sequence_tools`, the AI writer's tools by `list_outbound_agent_tools`, message tools by `list_message_tools` and sender tools by `list_sender_tools`. Reach them through one of three runner tools, passing `{"name": "<tool>", "arguments": {...}}`:
+Every tool named here is on the Oneprofile connector's list under its own name. Send each argument as its JSON type: `true`, never `"true"`. A job with no tool here is done in Oneprofile: say so, with the link an answer gave.
 
-- `run_read_tool` for a call that only reads
-- `run_change_tool` for a call that changes the workspace
-- `run_send_or_remove_tool` for a call that sends to people, removes something, changes where a payout goes or loosens what waits for a person's approval. Launching, resuming and test sends go through this runner.
-
-Read exact arguments with `describe_tool` (up to 8 names per call). When a runner refuses a call, it names the runner to use.
+`launch_sequence` and `resume_sequence` with `dry_run: true` only report what they would do.
 
 ## 1. Read the workspace
 
-Call `get_business_context` and `list_reference_documents` through `run_read_tool`. The sequence's writer uses them, and they answer most of what you would otherwise ask the user.
+Call `get_business_context` and `list_reference_documents`. The sequence's writer uses them, and they answer most of what you would otherwise ask the user.
 
 For a new sequence, or advice on cadence, openers or tone, call `search_playbooks` and then `read_playbook` on what fits (for example `oneprofile-outbound-agents`). Skip the playbooks when the user has fully specified the change they want, and make exactly that change.
 
@@ -35,11 +31,12 @@ Call `build_sequence` with:
 
 - `name`: unique in the workspace
 - `table_id`, and `view_id` when writing to only part of the table
-- `intent`, plus the goal and voice the user described
+- `goal` and `voice`, in the user's words
+- `campaign`: leave it `none` unless the user asks for a campaign that introduces their company (`introduce_company`)
 - `senders`: leave it empty when the workspace has one sender, since it is assigned for you, or to choose later. List them with `list_senders`.
-- `steps`: leave it empty. The sequence is then built on a library campaign tailored to this audience. Give steps only when the user specified the cadence, because what you give replaces the cadence whole.
+- `steps`: leave it empty to keep the cadence every new sequence starts with: three emails the agent writes for each contact. Give steps only when the user specified the cadence, because what you give replaces the cadence whole.
 
-`build_sequence` builds email steps only. To add LinkedIn steps or condition branches, or to replace the emails with LinkedIn steps, use `edit_sequence_steps` after it.
+To add LinkedIn steps or condition branches, use `edit_sequence_steps` after it.
 
 Building is free and sends nothing. Its answer says roughly what sending will cost.
 
@@ -49,13 +46,11 @@ In the same reply, call `write_sequence_previews` for a few contacts. It is free
 
 Change what the user asks for:
 
-- **Voice, goal or call to action**: `update_outbound_agent`. Priced, so say the price.
-- **One step's instructions**: `edit_message_prompts`. Also priced.
-- **One contact's message**: `pin_message_for_contact` with the new body
+- **What the writing says or how it sounds** ("too salesy", "shorter"): `mark_needs_work` on one contact, with the user's own words as the `reason`. It writes that contact's message again for free (up to 100 a day), and proposes what the agent should learn. The user keeps the lesson with **Looks good** on the sequence's Preview.
 - **The steps themselves**: read them first with `get_sequence` or `read_sequence_steps`, then call `edit_sequence_steps` with the full list. Mark every step you keep with `keeps_step`, because a step left out is deleted.
-- **A spam check on the copy**: `check_message_for_spam`
+- **The agent's goal, call to action or research**: these are changed in Oneprofile, on the sequence's AI writing tab.
 
-When the user wants to see a message in a real inbox, `send_test_email` sends one step, rendered for one contact, through `run_send_or_remove_tool`. With `to_address` empty it goes to the signed-in user. It costs no credits and enrols nobody.
+When the user wants to see a message in a real inbox, `send_test_email` sends one step, rendered for one contact. With `to_address` empty it goes to the signed-in user. It costs no credits and enrols nobody.
 
 ## 5. Clear the launch checks
 
@@ -64,7 +59,7 @@ When the user wants to see a message in a real inbox, `send_test_email` sends on
 - fix it with the matching tool when the user's request covers it, or
 - tell the user exactly what to do, with the link the tool returned when one is needed in the app. Connecting a mailbox or a LinkedIn account happens in Oneprofile.
 
-`find_missing_emails` and `verify_sequence_emails` are optional and priced. Offer them with their price, and run them only on a yes.
+`find_missing_emails` is optional and priced. Offer it with its price, and run it only on a yes.
 
 ## 6. Launch only on an explicit instruction
 
@@ -78,10 +73,10 @@ Right before launching, say in a few lines:
 - when the first messages go out
 - what it costs
 
-Then call `launch_sequence` through `run_send_or_remove_tool`. Pass on the price line and the link from its answer.
+Then call `launch_sequence`. Pass on the price line and the link from its answer.
 
-- **Pause**: `pause_sequence`, through `run_change_tool`. No confirmation needed when the user asks.
-- **Resume**: `resume_sequence`, through `run_send_or_remove_tool`. It sends again, so confirm first.
+- **Pause**: `pause_sequence`. No confirmation needed when the user asks.
+- **Resume**: `resume_sequence`. It sends again, so confirm first.
 
 ### Example
 
