@@ -31,7 +31,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Industries from the fixed list, e.g. Software Development. A value outside it is refused naming the nearest: retry with that."
+            "description": "Industries from the fixed list, e.g. Software Development; one outside it is refused naming the nearest."
           },
           "company_headcount_min": {
             "type": "integer",
@@ -50,7 +50,7 @@
           },
           "company_revenue_min": {
             "type": "integer",
-            "description": "Least annual company revenue in US dollars (10000000); on a people search, their current employer's. Many companies lack it, so it shrinks a search: say so rather than call a small number a small market."
+            "description": "Least annual revenue in US dollars (10000000), the current employer's on a people search. Many companies lack it, so it shrinks a search: say so rather than call a small number a small market."
           },
           "company_revenue_max": {
             "type": "integer",
@@ -61,7 +61,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Free words in a profile or a company description; loose, so only for an idea no other filter carries, never a title or an industry."
+            "description": "Words in a headline or company description; loose, so only for an idea no other filter carries, never a title or industry."
           },
           "job_titles": {
             "type": "array",
@@ -75,21 +75,21 @@
             "items": {
               "type": "string"
             },
-            "description": "Titles to leave out, the near misses a title search catches: 'Executive Assistant', 'Intern'."
+            "description": "Titles to leave out, the near misses a title search finds: 'Executive Assistant'."
           },
           "seniorities": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "How senior the person is, from this closed list: C-Level, Director, Founder, Head, Intern, Manager, Owner, Partner, President/Vice President, Senior, Specialist. Any other value is refused, so use these spellings exactly."
+            "description": "How senior the person is, from this closed list: C-Level, Founder, Owner, Partner, Vice President, Director, Head, Manager, Senior, Specialist, Intern. These spellings only; executives anywhere are C-Level."
           },
           "departments": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Which part of the business they work in, from this closed list: Administrative, C-Suite, Consulting, Customer Service, Design, Education, Engineering and Technical, Finance & Accounting, General Management, Human Resources, Legal, Marketing, Medical, Operations, Other, Product, Project Management, Real Estate, Research, Sales, Trades. Refused the same way as seniorities."
+            "description": "Their department, from this closed list: Administrative, C-Suite, Consulting, Customer Service, Design, Education, Engineering and Technical, Finance & Accounting, General Management, Human Resources, Legal, Marketing, Medical, Operations, Other, Product, Project Management, Real Estate, Research, Sales, Trades. These spellings only."
           },
           "person_countries": {
             "type": "array",
@@ -114,7 +114,7 @@
           },
           "started_current_role_after": {
             "type": "string",
-            "description": "Only people who started the job they hold now on or after this day, as YYYY-MM-DD: the job change filter, for someone just landed in a role or a champion who moved."
+            "description": "People who started their current job on or after this day, YYYY-MM-DD: the job change filter (new in a role, a champion who moved)."
           },
           "past_job_titles": {
             "type": "array",
@@ -128,14 +128,14 @@
             "items": {
               "type": "string"
             },
-            "description": "Companies they used to work for, by brand name: 'ex-Stripe', alumni, a champion who moved. Every past filter describes the same past job. Never also put the company in exclude_company_names: an exclusion leaves out anybody who ever worked there."
+            "description": "Companies they used to work for, by brand name: 'ex-Stripe', alumni, a champion who moved. Every past filter describes the same past job. Never also put it in exclude_company_names, which leaves out anybody who ever worked there."
           },
           "more_filters": {
             "type": "array",
             "items": {
               "$ref": "#/$defs/FilterRow"
             },
-            "description": "Every other filter the Find leads page offers, one row each, by what it takes. include/exclude: first_name, last_name, profile_location, work_location, school, skills, languages, company_identifier, company_type, company_keyword, past_company_identifier, past_company_website, past_company_industry, past_company_type, past_company_keyword, degree, company_cities, past_departments, past_management_levels, past_company_countries, past_company_cities, past_company_states, company_size_bands, company_states, certifications, language_proficiency; min/max: past_company_headcount, past_company_revenue, years_of_experience, years_in_current_company, connections, followers, total_experience_months, company_headcount_growth_percent, years_in_past_company, company_founded, company_funding_amount, graduated, recommendations; value yes/no: is_decision_maker, is_working, company_is_b2b, active_profile_only; value YYYY-MM-DD: company_funded_after, left_company_after, left_company_before; value the window (1month, 3months, 12months) + min/max percent: company_headcount_growth, past_company_headcount_growth; value table + include column: company_table, past_company_table; include ticked rows, name #ref: excluded_people. A row may also finish a filter an argument sets (its exclusions, the other end of its range) by the name list_search_filters gives it. list_search_filters says what each means and spells out its choices. (maxItems: 30)"
+            "description": "Every other page filter, one row each, by what it takes. include/exclude: first_name, last_name, profile_location, work_location, school, skills, languages, company_identifier, company_type, company_keyword, past_company_identifier, past_company_website, past_company_industry, past_company_type, past_company_keyword, degree, company_cities, past_departments, past_management_levels, past_company_countries, past_company_cities, past_company_states, company_size_bands, company_states, certifications, language_proficiency; min/max: past_company_headcount, past_company_revenue, years_of_experience, years_in_current_company, connections, followers, total_experience_months, company_headcount_growth_percent, years_in_past_company, company_founded, company_funding_amount, graduated, recommendations; value yes/no: is_decision_maker, is_working, company_is_b2b, active_profile_only, complete_profile_only; value YYYY-MM-DD: company_funded_after, left_company_after, left_company_before; value, one choice: job_title_match, row_order; value, a whole number: max_per_company; value the window (1month, 3months, 12months) + min/max percent: company_headcount_growth, past_company_headcount_growth; value table + include column: company_table, past_company_table; include ticked rows, name #ref: excluded_people, excluded_employers. A row may also finish a filter an argument sets (its exclusions, the other end of its range). list_search_filters explains each. (maxItems: 30)"
           },
           "include_known_people": {
             "type": "boolean",
@@ -464,7 +464,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Industries from the fixed list, e.g. Software Development. A value outside it is refused naming the nearest: retry with that."
+            "description": "Industries from the fixed list, e.g. Software Development; one outside it is refused naming the nearest."
           },
           "company_headcount_min": {
             "type": "integer",
@@ -483,7 +483,7 @@
           },
           "company_revenue_min": {
             "type": "integer",
-            "description": "Least annual company revenue in US dollars (10000000); on a people search, their current employer's. Many companies lack it, so it shrinks a search: say so rather than call a small number a small market."
+            "description": "Least annual revenue in US dollars (10000000), the current employer's on a people search. Many companies lack it, so it shrinks a search: say so rather than call a small number a small market."
           },
           "company_revenue_max": {
             "type": "integer",
@@ -494,7 +494,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Free words in a profile or a company description; loose, so only for an idea no other filter carries, never a title or an industry."
+            "description": "Words in a headline or company description; loose, so only for an idea no other filter carries, never a title or industry."
           },
           "company_states": {
             "type": "array",
@@ -515,18 +515,18 @@
             "items": {
               "type": "string"
             },
-            "description": "Technologies the company's website runs, for example Shopify or HubSpot. It reaches only the companies whose site has been read, about one in six, so it shrinks a search hard: say so rather than let a small number read as a small market."
+            "description": "Technologies the company's website runs, such as Shopify or HubSpot. Only about one in six sites has been read, so it shrinks a search hard: say so rather than call a small number a small market."
           },
           "funding_round_types": {
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "The type of the last round the company raised, as alternatives: Seed, Series A, Series B. This is where 'Series A fintechs' is answered. Funding coverage is thin, so it narrows hard: say a small answer here is missing data as much as a small market."
+            "description": "The type of the company's last round, as alternatives: Pre Seed, Seed, Series A, Series E+ (E on). Funding coverage is thin, so it narrows hard: say a small answer here is missing data as much as a small market."
           },
           "last_funding_after": {
             "type": "string",
-            "description": "Only companies whose last round closed on or after this day, as YYYY-MM-DD. 'Just raised' or 'recently raised funding' is this filter, alone or beside others, free to count and sample."
+            "description": "Companies whose last round closed on or after this day, YYYY-MM-DD. 'Just raised' or 'recently raised funding' is this filter, alone or beside others."
           },
           "executive_joined_within": {
             "type": "string",
@@ -536,7 +536,7 @@
               "past_quarter",
               "past_year"
             ],
-            "description": "Only companies where an executive joined in this window. The 'new VP of Sales' trigger. (default: 'any')"
+            "description": "Companies where an executive joined in this window: the 'new VP of Sales' trigger. (default: 'any')"
           },
           "executive_titles": {
             "type": "array",
@@ -550,7 +550,11 @@
             "items": {
               "$ref": "#/$defs/FilterRow"
             },
-            "description": "Every other filter the Find leads page offers, one row each, by what it takes. include/exclude: identifier, location, company_type, office_countries, office_states, office_cities, specialities, enriched_keywords, category, size_bands, post_keyword, social_networks; min/max: founded, followers, funding_rounds_count, last_funding_amount, post_reactions; value yes/no: is_b2b, is_saas, has_pricing_page, has_free_trial, has_demo, has_api_docs, has_mobile_apps, has_online_reviews, is_downloadable, has_website, unique_domain_only, exclude_expired_domains; value YYYY-MM-DD: technology_verified_after, technology_first_seen_after, last_funding_before; value, one choice: executive_left_within, posted_within; value the window (1month, 3months, 12months) + min/max percent: headcount_growth; value the team (a department or a seniority) + min/max: department_headcount, seniority_headcount. A row may also finish a filter an argument sets (its exclusions, the other end of its range) by the name list_search_filters gives it. list_search_filters says what each means and spells out its choices. (maxItems: 30)"
+            "description": "Every other page filter, one row each, by what it takes. include/exclude: identifier, location, company_type, office_countries, office_states, office_cities, specialities, enriched_keywords, category, size_bands, post_keyword, social_networks; min/max: founded, followers, funding_rounds_count, last_funding_amount, post_reactions; value yes/no: is_b2b, is_saas, has_pricing_page, has_free_trial, has_demo, has_api_docs, has_mobile_apps, has_online_reviews, is_downloadable, has_website, unique_domain_only, exclude_expired_domains, has_employees; value YYYY-MM-DD: technology_verified_after, technology_first_seen_after, last_funding_before; value, one choice: row_order, executive_left_within, posted_within; value the window (1month, 3months, 12months) + min/max percent: headcount_growth; value the team (a department or a seniority) + min/max: department_headcount, seniority_headcount; include ticked rows, name #ref: excluded_companies. A row may also finish a filter an argument sets (its exclusions, the other end of its range). list_search_filters explains each. (maxItems: 30)"
+          },
+          "include_known_people": {
+            "type": "boolean",
+            "description": "True counts and adds companies your tables hold. (default: False)"
           }
         },
         "type": "object",
@@ -743,6 +747,10 @@
             "items": {
               "$ref": "#/$defs/FilterRow"
             },
+            "description": "As in find_companies."
+          },
+          "include_known_people": {
+            "type": "boolean",
             "description": "As in find_companies."
           }
         },
@@ -1010,7 +1018,7 @@
     },
     {
       "name": "list_tables",
-      "description": "List this workspace's tables with each one's row count, folder, owner, whether it is archived and, for a table of people or of companies, its table_type (a line with no table_type is an Other table), most recently changed first. Start here whenever a person refers to a table by name, because every other table tool needs the id this gives you; a search finds archived tables too, and matches the description as well as the name, as the page's search does. Scope picks the list: every table on the list, or all of them ordered by when this person last opened each, this person's favorites or the ones they opened recently, the archived ones, the untouched ones nobody in the workspace has opened or changed for a while (what to suggest archiving; nothing archives a table by itself), the ones waiting for a folder since folders replaced tags, or Trash with the folders in it. folder narrows it to the tables directly in one folder ('which tables are in Events'), and beside a scope, a search, or an owner to that folder and every folder under it, as the Tables list narrows within the folder open; owner narrows it to one person's ('my tables', 'the ones Maya owns'). It reads no rows.",
+      "description": "List this workspace's tables with each one's row count, folder, owner, whether it is archived and, for a table of people or of companies, its table_type (a line with no table_type is an Other table), most recently changed first. Start here whenever a person refers to a table by name, because every other table tool needs the id this gives you; a search finds archived tables too, and matches the description as well as the name, as the page's search does. Scope picks the list: every table on the list, or all of them ordered by when this person last opened each, this person's favorites or the ones they opened recently, the archived ones, the untouched ones nobody in the workspace has opened or changed for a while (what to suggest archiving; nothing archives a table by itself), the ones waiting for a folder since folders replaced tags, or Trash with the folders in it. folder narrows it to the tables directly in one folder ('which tables are in Events'), and beside a scope, a search, or an owner to that folder and every folder under it, as the Tables list narrows within the folder open; owner narrows it to one person's ('my tables', 'the ones Maya owns'); table_type to one type ('my company tables', the tables a people search can follow with a company_table row). It reads no rows.",
       "inputSchema": {
         "properties": {
           "scope": {
@@ -1025,7 +1033,7 @@
               "unfiled",
               "trash"
             ],
-            "description": "all: newest change first; opened: last opened by the asker first. starred, recent: their own Favorites and Recent. untouched: unused for months, to suggest archiving. unfiled: waiting for a folder. trash: deleted tables and folders (sequences: list_trashed_sequences). (default: 'all')"
+            "description": "all: newest change first; opened: their last opened first. starred, recent: their own Favorites and Recent. untouched: unused for months. unfiled: waiting for a folder. trash: deleted tables and folders (sequences: list_trashed_sequences). (default: 'all')"
           },
           "name_contains": {
             "type": "string",
@@ -1038,6 +1046,16 @@
           "owner": {
             "type": "string",
             "description": "One person's tables: name, email, me, no owner. (default: '')"
+          },
+          "table_type": {
+            "type": "string",
+            "enum": [
+              "any",
+              "person",
+              "company",
+              "other"
+            ],
+            "description": "Only tables of this type. (default: 'any')"
           },
           "limit": {
             "type": "integer",
