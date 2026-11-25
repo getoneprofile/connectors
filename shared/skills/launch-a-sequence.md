@@ -1,6 +1,6 @@
 ---
 name: launch-a-sequence
-description: Turn a Oneprofile table into an email and LinkedIn outreach sequence, show the messages it will send, clear its launch checks and launch it when the user says so. Use when the user asks to write a cold email campaign, set up outreach or follow-ups to a list, build, edit or tailor a sequence, change its steps, voice or goal, pick senders, preview messages, find out what blocks a launch, or launch, pause or resume a sequence.
+description: Turn a Oneprofile table into an {{channels}} outreach sequence, show the messages it will send, clear its launch checks and launch it when the user says so. Use when the user asks to write a cold email campaign, set up outreach or follow-ups to a list, build, edit or tailor a sequence, change its steps, voice or goal, pick senders, preview messages, find out what blocks a launch, or launch, pause or resume a sequence.
 ---
 
 # Launch a sequence
@@ -21,7 +21,7 @@ For a new sequence, or advice on cadence, openers or tone, call `search_playbook
 
 ## 2. Check the audience
 
-Read the table with `get_table`. Email steps need an email column, and LinkedIn steps need a LinkedIn URL column. If many rows have no email, say how many, and offer to find them first (the `enrich-a-table` skill) or later with `find_missing_emails`.
+Read the table with `get_table`. {{step_columns}} If many rows have no email, say how many, and offer to find them first (the `enrich-a-table` skill) or later with `find_missing_emails`.
 
 To write to only part of a table, use a saved view (`list_table_views`) or specific rows.
 
@@ -36,7 +36,7 @@ Call `build_sequence` with:
 - `senders`: leave it empty when the workspace has one sender, since it is assigned for you, or to choose later. List them with `list_senders`.
 - `steps`: leave it empty to keep the cadence every new sequence starts with: three emails the agent writes for each contact. Give steps only when the user specified the cadence, because what you give replaces the cadence whole.
 
-To add LinkedIn steps or condition branches, use `edit_sequence_steps` after it.
+{{more_steps}}
 
 Building is free and sends nothing. Its answer says roughly what sending will cost.
 
@@ -57,7 +57,7 @@ When the user wants to see a message in a real inbox, `send_test_email` sends on
 `get_sequence` with the sequence lists what blocks launch, such as no sender, no audience, a missing subject, or no business context. For each blocker:
 
 - fix it with the matching tool when the user's request covers it, or
-- tell the user exactly what to do, with the link the tool returned when one is needed in the app. Connecting a mailbox or a LinkedIn account happens in Oneprofile.
+- tell the user exactly what to do, with the link the tool returned when one is needed in the app. {{connect_where}}
 
 `find_missing_emails` is optional and priced. Offer it with its price, and run it only on a yes.
 

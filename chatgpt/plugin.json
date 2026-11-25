@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "oneprofile",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace.",
   "author": {
     "name": "Oneprofile",
@@ -110,7 +110,7 @@
         "commerce_description": "This plugin does not sell products or process payments. Some actions spend credits the workspace already holds in Oneprofile; the plugin cannot buy credits or change plans."
       },
       "publication": {
-        "release_notes": "The skills now use only tools listed under their own names, each with its own description, input schema and hints. The generic tools stay listed only until the named tools are approved, and will then be removed. Adds setting up a first sequence from the company website. Lead searches are listed as a free count and a separate tool that saves to a table."
+        "release_notes": "The skills now use only tools listed under their own names, each with its own description, input schema and hints. The generic tools (run_read_tool, run_change_tool, run_send_or_remove_tool, describe_tool and the list_*_tools) are removed from the list. Adds setting up a first sequence from the company website. Lead searches are listed as a free count and a separate tool that saves to a table."
       }
     }
   }

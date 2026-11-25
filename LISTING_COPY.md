@@ -45,6 +45,8 @@ ChatGPT variant: OpenAI's metadata check asks listings to leave out pricing and 
 
 > Requirements: You need a Oneprofile account. When you connect, choose read only to let ChatGPT look things up without changing anything, or read and write. Email sends from a connected Google Workspace mailbox, and LinkedIn steps run in your browser through the Oneprofile extension.
 
+Claude variant (2026-11-24): Claude's directory refuses acting on LinkedIn through a person's browser session, so Claude connections build and launch email steps only. In Claude's copy (README, plugin.json, skills via `shared/build.py`), sequences are email sequences, and the README carries "Where contact data comes from" (sources, legal basis, removal address), which the directory requires.
+
 ## Capabilities
 
 1. Set up your first sequence from your website

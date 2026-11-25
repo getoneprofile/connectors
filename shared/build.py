@@ -23,6 +23,12 @@ STORES = {
         "attached": "If they attached a spreadsheet or CSV, read",
         "give_csv": "Give it to the user as a file, or as a short table when it's small.",
         "credits_note": " The free plan has 200 credits a month; what they reach is the number the answer gives.",
+        # Claude's directory refuses acting on LinkedIn through a person's browser session
+        # (2026-11-24): Claude connections build and launch email steps only.
+        "channels": "email",
+        "step_columns": "Email steps need an email column. Sequences from Claude send by email only: LinkedIn steps are added in Oneprofile itself.",
+        "more_steps": "To add condition branches, use `edit_sequence_steps` after it.",
+        "connect_where": "Connecting a mailbox happens in Oneprofile.",
     },
     "chatgpt": {
         "server": "Oneprofile app",
@@ -30,6 +36,10 @@ STORES = {
         "attached": "If they attached a spreadsheet or CSV, read",
         "give_csv": "Give it to the user as a file, or as a short table when it's small.",
         "credits_note": " What the credits reach is the number the answer gives.",
+        "channels": "email and LinkedIn",
+        "step_columns": "Email steps need an email column, and LinkedIn steps need a LinkedIn URL column.",
+        "more_steps": "To add LinkedIn steps or condition branches, use `edit_sequence_steps` after it.",
+        "connect_where": "Connecting a mailbox or a LinkedIn account happens in Oneprofile.",
     },
     "cursor": {
         "server": "Oneprofile MCP server",
@@ -37,6 +47,10 @@ STORES = {
         "attached": "If they attached a spreadsheet or CSV, or point to one in the workspace, read",
         "give_csv": "Save it as a `.csv` file in the workspace where the user asks, or show it as a short table when it's small.",
         "credits_note": " The free plan has 200 credits a month; what they reach is the number the answer gives.",
+        "channels": "email and LinkedIn",
+        "step_columns": "Email steps need an email column, and LinkedIn steps need a LinkedIn URL column.",
+        "more_steps": "To add LinkedIn steps or condition branches, use `edit_sequence_steps` after it.",
+        "connect_where": "Connecting a mailbox or a LinkedIn account happens in Oneprofile.",
     },
 }
 #: Backticked words in a skill that are arguments, values or columns, never tools.

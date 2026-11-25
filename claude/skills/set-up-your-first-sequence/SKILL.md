@@ -1,6 +1,6 @@
 ---
 name: set-up-your-first-sequence
-description: Set up a new workspace's first email and LinkedIn sequence from the company website, in the five steps of Oneprofile's setup page (research your company, choose who to reach, find people, review the messages, connect your mailbox). Use when the user has just connected Oneprofile or signed up, says they are new, asks how to get started, or asks to set up outreach from their website.
+description: Set up a new workspace's first email sequence from the company website, in the five steps of Oneprofile's setup page (research your company, choose who to reach, find people, review the messages, connect your mailbox). Use when the user has just connected Oneprofile or signed up, says they are new, asks how to get started, or asks to set up outreach from their website.
 ---
 
 # Set up your first sequence

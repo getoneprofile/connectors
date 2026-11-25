@@ -1,8 +1,8 @@
 {
   "name": "oneprofile",
   "displayName": "Oneprofile",
-  "version": "1.2.0",
-  "description": "Find prospects, research them, and run email and LinkedIn outreach in your Oneprofile workspace.",
+  "version": "1.2.1",
+  "description": "Find prospects, research them, and run email outreach in your Oneprofile workspace.",
   "author": {
     "name": "Oneprofile",
     "email": "support@getoneprofile.ai",

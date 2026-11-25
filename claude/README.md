@@ -1,6 +1,6 @@
 # Oneprofile for Claude
 
-Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to, by email and LinkedIn. This plugin connects Claude to your Oneprofile workspace and teaches it the workflows that get good results there, so you can find leads, research them, run outreach and work your replies from a conversation.
+Oneprofile is a go-to-market workspace: you build lists of companies and people, fill them in with researched facts, and write to the ones worth writing to. This plugin connects Claude to your Oneprofile workspace and teaches it the workflows that get good results there, so you can find leads, research them, run outreach and work your replies from a conversation.
 
 It bundles two things:
 
@@ -15,7 +15,7 @@ It bundles two things:
 | `find-leads` | Turn a description of who you sell to into a counted search, then a table of people or companies |
 | `import-and-export` | Bring a CSV, a pasted list or records from a connected tool such as your CRM into a table, and send results back to your CRM or out as CSV |
 | `enrich-a-table` | Fill in work emails, phone numbers, company details or AI research on a table's rows |
-| `launch-a-sequence` | Turn a table into an email and LinkedIn sequence and get it through its launch checks |
+| `launch-a-sequence` | Turn a table into an email sequence and get it through its launch checks |
 | `triage-replies` | Work through replies in the inbox: read, label, draft answers and send the ones you approve |
 | `outreach-review` | Get a plain summary of how your sequences, replies, tables and credits are doing |
 
@@ -27,7 +27,7 @@ You don't need to name a skill. Ask in your own words, such as "find heads of Re
 2. Open the plugin's **Connectors** tab and connect **Oneprofile**. In Claude Code, run `/mcp`, choose the Oneprofile server and sign in from the browser tab it opens.
 3. Sign in to Oneprofile, pick the workspace Claude should work in, and choose **Read and write** or **Read only**. Read only lets Claude look things up and never change them. Making changes spends your workspace's Oneprofile credits, and every new workspace starts with the free plan's.
 
-Email steps send from a Google Workspace mailbox connected in Oneprofile, and LinkedIn steps run in your browser through the Oneprofile extension.
+Sequences built from Claude send by email only, from a Google Workspace mailbox connected in Oneprofile. Claude cannot add or launch LinkedIn steps.
 
 You need a Oneprofile account. Sign up at [getoneprofile.ai](https://www.getoneprofile.ai). Setup details for each app are in the [AI apps guide](https://docs.getoneprofile.ai/integrations/ai-apps).
 
@@ -38,6 +38,10 @@ Searching, counting search matches and reading your workspace are free. Creating
 ## Safety and approvals
 
 Claude works as you, so what it changes counts as your change. Each Oneprofile tool does one job and says whether it only looks things up, changes your workspace, or can send to people outside it, remove or overwrite something. Your app can ask before each kind, so you can let Claude look things up freely and still approve every send. The skills also tell Claude to ask you before it launches a sequence, sends a reply or deletes anything.
+
+## Where contact data comes from
+
+Searches and enrichment return named people's business contact details: work emails, phone numbers, job titles and company details. Oneprofile gets them from licensed B2B data providers and from public professional profiles. It holds this business contact data on the basis of legitimate interest (GDPR Art. 6(1)(f)): reaching professionals about products relevant to their work. If you are listed and want to be removed, email support@getoneprofile.ai.
 
 ## Data and privacy
 
