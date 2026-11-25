@@ -70,7 +70,6 @@ The server acts as you, in the one Oneprofile workspace you pick when you sign i
 | `find_missing_emails` | Find missing work emails |
 | `create_table_from_connected_tool` | Create a table from a connected tool |
 | `add_export_column` | Add an export column |
-| `mark_conversations_done` | Mark conversations done, or take the mark off |
 | `draft_reply` | Draft a reply |
 | `approve_first_sequence_emails` | Mark the first emails as good to send |
 | `show_first_sequence_steps` | Write every step |
@@ -92,6 +91,7 @@ The server acts as you, in the one Oneprofile workspace you pick when you sign i
 | `approve_tasks` | Approve tasks |
 | `reject_tasks` | Reject tasks |
 | `rewrite_task_message` | Rewrite a task's message |
+| `mark_conversations_done` | Mark conversations done, or take the mark off |
 | `mark_do_not_contact` | Add a contact to Do not contact |
 | `set_conversation_labels` | Set a conversation's labels |
 | `revise_draft` | Revise a draft |

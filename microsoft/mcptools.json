@@ -3886,7 +3886,7 @@
       "annotations": {
         "title": "Mark conversations done, or take the mark off",
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false
       }
     },
@@ -4457,7 +4457,7 @@
         "title": "Mark what an agent wrote as Needs work",
         "readOnlyHint": false,
         "destructiveHint": true,
-        "openWorldHint": false
+        "openWorldHint": true
       }
     },
     {
